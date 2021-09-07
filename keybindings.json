@@ -1,0 +1,25 @@
+// File location: ~/.config/Code/User/keybindings.json
+[
+    {
+        "command": "vscode-neovim.compositeEscape1",
+        "key": "i",
+        "when": "neovim.mode == insert && editorTextFocus",
+        "args": "i"
+    },
+    {
+        "key": "ctrl+h",
+        "command": "workbench.action.navigateLeft"
+    },
+    {
+        "key": "ctrl+l",
+        "command": "workbench.action.navigateRight"
+    },
+    {
+        "key": "ctrl+k",
+        "command": "workbench.action.navigateUp"
+    },
+    {
+        "key": "ctrl+j",
+        "command": "workbench.action.navigateDown"
+    }
+]

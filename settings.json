@@ -1,0 +1,34 @@
+// File location: ~/.config/Code/User/settings.json
+{
+    "gitlens.currentLine.enabled": false,
+    "gitlens.hovers.currentLine.over": "line",
+    "gitlens.codeLens.enabled": false,
+    "editor.fontFamily": "'Fira Code Retina', 'Hack Nerd Font', 'monospace', 'Droid Sans Fallback'",
+    "editor.minimap.enabled": false,
+    "window.menuBarVisibility": "toggle",
+    "editor.cursorBlinking": "solid",
+    "files.autoSave": "onFocusChange",
+    "spotify.showSignInButton": false,
+    "spotify.showSignOutButton": false,
+    "spotify.statusCheckInterval": 3000,
+    "workbench.iconTheme": "material-icon-theme",
+    "vscode-neovim.neovimExecutablePaths.linux": "",
+    "git.enableSmartCommit": true,
+    "window.zoomLevel": 1,
+    "workbench.colorTheme": "Default Dark+",
+    "workbench.colorCustomizations": 
+    {
+        "editor.background": "#121212",
+        "activityBar.background": "#121212",
+        "sideBar.background": "#121212",
+        "editorGroupHeader.tabsBackground": "#121212",
+        "statusBar.background": "#007add",
+        "sideBar.border": "#5c5c5c",
+        "activityBar.border": "#5c5c5c"
+    },
+    "git.confirmSync": false,
+    "clock.priority": 40,
+    "workbench.sideBar.location": "right",
+    "editor.fontLigatures": true,
+    "editor.fontWeight": 400
+}

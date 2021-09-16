@@ -3,7 +3,7 @@
     "gitlens.currentLine.enabled": false,
     "gitlens.hovers.currentLine.over": "line",
     "gitlens.codeLens.enabled": false,
-    "editor.fontFamily": "'Fira Code Retina', 'Hack Nerd Font', 'monospace', 'Droid Sans Fallback'",
+    "editor.fontFamily": "'Fira Code Retina', 'monospace', 'Droid Sans Fallback'",
     "editor.minimap.enabled": false,
     "window.menuBarVisibility": "toggle",
     "editor.cursorBlinking": "solid",
@@ -12,9 +12,7 @@
     "spotify.showSignOutButton": false,
     "spotify.statusCheckInterval": 3000,
     "workbench.iconTheme": "material-icon-theme",
-    "vscode-neovim.neovimExecutablePaths.linux": "",
     "git.enableSmartCommit": true,
-    "window.zoomLevel": 1,
     "workbench.colorTheme": "Default Dark+",
     "workbench.colorCustomizations": 
     {
@@ -23,6 +21,8 @@
         "sideBar.background": "#121212",
         "editorGroupHeader.tabsBackground": "#121212",
         "statusBar.background": "#007add",
+        "editorCursor.foreground": "#007add",
+        "editorCursor.background": "#ffffff",
         "sideBar.border": "#5c5c5c",
         "activityBar.border": "#5c5c5c"
     },
@@ -30,5 +30,14 @@
     "clock.priority": 40,
     "workbench.sideBar.location": "right",
     "editor.fontLigatures": true,
-    "editor.fontWeight": 400
+    "editor.fontWeight": 400,
+    "vscode-neovim.neovimExecutablePaths.linux": "/usr/local/bin/nvim",
+    "gitlens.defaultDateFormat": "Do MMMM, YYYY h:mma",
+    "gitlens.defaultDateShortFormat": "D MMM, h:mma",
+    "editor.bracketPairColorization.enabled": true,
+    "editor.lineNumbers": "relative",
+    "terminal.integrated.fontFamily": "'Hack Nerd Font'",
+    "window.zoomLevel": 1,
+    "clock.alignment": "Right",
+    "vscode-neovim.neovimInitVimPaths.linux": "/home/blue/.config/nvim"
 }

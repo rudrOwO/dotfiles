@@ -119,3 +119,4 @@ bindkey '\t' end-of-line
 
 # Augmenting PATH
 export PATH=$PATH:/home/blue/.local/bin
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib:/usr/lib:/lib 

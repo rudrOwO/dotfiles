@@ -21,5 +21,13 @@
     {
         "key": "ctrl+j",
         "command": "workbench.action.navigateDown"
+    },
+    {
+        "key": "ctrl+j",
+        "command": "selectNextSuggestion"
+    },
+    {
+        "key": "ctrl+k",
+        "command": "selectPrevSuggestion"
     }
 ]

@@ -116,3 +116,6 @@ source $ZSH/oh-my-zsh.sh
 # Custom keybindings
 bindkey '\^[[Z' '\t'
 bindkey '\t' end-of-line
+
+# Augmenting PATH
+export PATH=$PATH:/home/blue/.local/bin

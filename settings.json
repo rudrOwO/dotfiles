@@ -24,7 +24,7 @@
     //    "editorCursor.foreground": "#007add",
     //    "editorCursor.background": "#ffffff",
     //    "sideBar.border": "#5c5c5c",
-    //    "activityBar.border": "#5c5c5c"
+    //    "activityBar.border": "#5c5c5c",
            "terminal.ansiBlack": "#000000",
            "terminal.ansiBlue": "#2472C8",
            "terminal.ansiBrightCyan": "#29B8DB",
@@ -40,7 +40,7 @@
            "terminal.ansiMagenta": "#BC3FBC",
            "terminal.ansiRed": "#CD3131",
            "terminal.ansiWhite": "#E5E5E5",
-           "terminal.ansiYellow": "#E5E510",
+           "terminal.ansiYellow": "#E5E510"
     },
     "git.confirmSync": false,
     "clock.priority": 40,

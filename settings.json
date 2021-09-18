@@ -6,6 +6,7 @@
     "editor.fontFamily": "'Fira Code Retina', 'monospace', 'Droid Sans Fallback'",
     "editor.minimap.enabled": false,
     "window.menuBarVisibility": "toggle",
+    "editor.scrollBeyondLastLine": false,
     "editor.cursorBlinking": "solid",
     "files.autoSave": "onFocusChange",
     "spotify.showSignInButton": false,
@@ -13,14 +14,16 @@
     "spotify.statusCheckInterval": 3000,
     "workbench.iconTheme": "material-icon-theme",
     "git.enableSmartCommit": true,
-    "workbench.colorTheme": "Ayu Dark Bordered",
+    "workbench.colorTheme": "Ayu Mirage Bordered",
     "workbench.colorCustomizations": 
     {
     //    "editor.background": "#121212",
     //    "activityBar.background": "#121212",
     //    "sideBar.background": "#121212",
     //    "editorGroupHeader.tabsBackground": "#121212",
-    //    "statusBar.background": "#007add",
+        "statusBar.background": "#007add",
+        "statusBar.foreground": "#ffffff",
+        "statusBar.border": "#007add",
     //    "editorCursor.foreground": "#007add",
     //    "editorCursor.background": "#ffffff",
     //    "sideBar.border": "#5c5c5c",
@@ -55,5 +58,5 @@
     "terminal.integrated.fontFamily": "'Hack Nerd Font'",
     "window.zoomLevel": 1,
     "clock.alignment": "Right",
-    "vscode-neovim.neovimInitVimPaths.linux": "/home/blue/.config/nvim"
+    "vscode-neovim.neovimInitVimPaths.linux": "/home/blue/.config/nvim/init.vim"
 }

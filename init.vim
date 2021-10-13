@@ -1,4 +1,6 @@
 nnoremap Y y$
+set clipboard+=unnamedplus
+set nrformats+=alpha
 
 if exists('g:vscode')
     "
@@ -11,9 +13,8 @@ else
     filetype plugin indent on
 
     set t_Co=256
-    set mouse=a
     set noshowmode
-    set background=light    
+    set background=dark    
     set termguicolors
     set number
     set relativenumber
@@ -22,6 +23,7 @@ else
     set expandtab
     set smartindent
     set cursorline
+    set mouse=a
 
     call plug#begin ('~/.config/nvim/plugged')
     Plug 'vim-airline/vim-airline'
@@ -32,13 +34,16 @@ else
     Plug 'morhetz/gruvbox'
     call plug#end ()
 
-    let g:airline_theme='deus'
+    let g:airline_theme='gruvbox'
     let ayucolor="mirage"
     let g:gruvbox_contrast_light='hard'
     let g:gruvbox_contrast_dark='hard'
+    let g:airline_powerline_fonts=1 
 
-    colorscheme ayu
+    colorscheme gruvbox
 
     "Auto-save on focus change
     "au FocusLost * :wa
+    "Using Transparent Background
+    hi Normal guibg=NONE ctermbg=NONE
 endif

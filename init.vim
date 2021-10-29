@@ -17,7 +17,7 @@ else
     set background=dark    
     set termguicolors
     set number
-    set relativenumber
+    set number
     set tabstop=4
     set shiftwidth=4
     set expandtab
@@ -34,11 +34,10 @@ else
     Plug 'morhetz/gruvbox'
     call plug#end ()
 
-    let g:airline_theme='gruvbox'
+    let g:airline_theme='deus'
     let ayucolor="mirage"
     let g:gruvbox_contrast_light='hard'
     let g:gruvbox_contrast_dark='hard'
-    let g:airline_powerline_fonts=1 
 
     colorscheme gruvbox
 

@@ -1,4 +1,4 @@
-// File location: ~/.config/Code/User/keybindings.json
+// Place your key bindings in this file to override the defaults
 [
     {
         "command": "vscode-neovim.compositeEscape1",
@@ -29,5 +29,14 @@
     {
         "key": "ctrl+k",
         "command": "selectPrevSuggestion"
+    },
+    {
+        "key": "ctrl+w",
+        "command": "workbench.action.closeActiveEditor"
+    },
+    {
+        "key": "g d",
+        "command": "editor.action.revealDefinition",
+        "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
     }
 ]

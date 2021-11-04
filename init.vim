@@ -3,7 +3,7 @@ set clipboard+=unnamedplus
 set nrformats+=alpha
 
 if exists('g:vscode')
-    "
+    nnoremap <silent> <gd> :call VSCodeNotify('editor.action.revealDefinition')
 else
     inoremap {<cr> {<cr>}<c-o><s-o>
     inoremap ii <Esc>
@@ -38,6 +38,7 @@ else
     let ayucolor="mirage"
     let g:gruvbox_contrast_light='hard'
     let g:gruvbox_contrast_dark='hard'
+    let g:airline_powerline_fonts=1
 
     colorscheme gruvbox
 

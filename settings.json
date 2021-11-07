@@ -1,23 +1,14 @@
-// File location: ~/.config/Code/User/settings.json
 {
-    "gitlens.currentLine.enabled": false,
-    "gitlens.hovers.currentLine.over": "line",
-    "gitlens.codeLens.enabled": false,
-    "editor.fontFamily": "'JetBrainsMono Nerd Font', 'Fira Code Regular', 'Monospace', 'Droid Sans Fallback'",
-    "editor.minimap.enabled": false,
-    "window.menuBarVisibility": "toggle",
-    "files.autoSave": "onFocusChange",
-    "spotify.showSignInButton": false,
-    "spotify.showSignOutButton": false,
-    "spotify.statusCheckInterval": 2000,
-    "git.enableSmartCommit": true,
-    "workbench.iconTheme": "material-icon-theme",
+    "workbench.colorTheme": "Default Dark+",
+    "editor.fontFamily": "'JetBrains Mono NL', Consolas, 'Courier New', monospace",
+    "workbench.sideBar.location": "right",
+    
     "workbench.colorCustomizations": 
     {
-        "editor.background": "#101010",
-        "activityBar.background": "#101010",
-        "sideBar.background": "#101010",
-        "editorGroupHeader.tabsBackground": "#101010",
+        "editor.background": "#000000",
+        "activityBar.background": "#000000",
+        "sideBar.background": "#000000",
+        "editorGroupHeader.tabsBackground": "#000000",
         "statusBar.background": "#007add",
         "statusBar.foreground": "#ffffff",
         //"statusBar.border": "#007add",
@@ -41,37 +32,44 @@
         "terminal.ansiWhite": "#E5E5E5",
         "terminal.ansiYellow": "#E5E510"
     },
-    "git.confirmSync": false,
-    "clock.priority": 40,
-    "workbench.sideBar.location": "right",
-    "editor.fontLigatures": true,
-    "editor.fontWeight": 400,
-    "gitlens.defaultDateFormat": "Do MMMM, YYYY h:mma",
-    "gitlens.defaultDateShortFormat": "D MMM, h:mma",
+    "files.autoSave": "onFocusChange",
+    //"vscode-neovim.neovimExecutablePaths.linux": "/usr/local/bin/nvim",
+    "vscode-neovim.neovimExecutablePaths.win32": "C:\\Program Files\\Neovim\\bin\\nvim.exe",
     "editor.bracketPairColorization.enabled": true,
-    "clock.alignment": "Right",
-    "vscode-neovim.neovimExecutablePaths.linux": "/usr/local/bin/nvim",
-    "vscode-neovim.neovimInitVimPaths.linux": "/home/blue/.config/nvim/init.vim",
-    "grunt.autoDetect": "on",
-    "window.zoomLevel": 1,
-    "editor.suggestSelection": "first",
-    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-    "C_Cpp.updateChannel": "Insiders",
-    "java.configuration.runtimes": [
-    
-        {
-            "name": "JavaSE-11",
-            "path": "/usr/lib/jvm/java-11-openjdk-amd64",
-            "default": true
-        } 
+    "editor.fontLigatures": true,
+    "vscode-neovim.neovimInitVimPaths.win32": "C:\\Users\\Blue\\AppData\\Local\\nvim\\init.vim",
+    "editor.inlineSuggest.enabled": true,
+    "editor.minimap.enabled": false,
+    "terminal.integrated.useWslProfiles": true,
+    "terminal.integrated.defaultProfile.windows": "Ubuntu-20.04 (WSL)",
+    "settingsSync.ignoredExtensions": [
+        "ms-vscode-remote.remote-wsl"
     ],
-    "files.exclude": {
-        "**/.classpath": true,
-        "**/.project": true,
-        "**/.settings": true,
-        "**/.factorypath": true
+    "polacode.target": "snippet",
+    "polacode.backgroundColor": "#101010",
+    "github.copilot.enable": {
+        "*": false,
+        "yaml": false,
+        "plaintext": false,
+        "markdown": false,
+        "cpp": false
     },
-    "liveServer.settings.donotShowInfoMsg": true,
-    "editor.guides.bracketPairs": true,
-    "editor.detectIndentation": false,
+    "gitlens.hovers.currentLine.over": "line",
+    "gitlens.currentLine.enabled": false,
+    "gitlens.codeLens.enabled": false,
+
+    // Disabling Intellisense for CP
+    "editor.quickSuggestions": {
+        "other": false,
+        "comments": false,
+        "strings": false
+    },
+    "editor.suggestOnTriggerCharacters": false,
+    "window.zoomLevel": 1,
+    "workbench.iconTheme": "material-icon-theme",
+    "editor.cursorStyle": "block",
+    "terminal.integrated.cursorBlinking": true,
+    "editor.guides.bracketPairs": "active",
+    "spotify.statusCheckInterval": 1000,
+    "editor.guides.bracketPairsHorizontal": false
 }

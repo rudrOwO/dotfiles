@@ -1,4 +1,3 @@
-// Place your key bindings in this file to override the defaults
 [
     {
         "command": "vscode-neovim.compositeEscape1",
@@ -34,9 +33,9 @@
         "key": "ctrl+w",
         "command": "workbench.action.closeActiveEditor"
     },
-    {
-        "key": "g d",
-        "command": "editor.action.revealDefinition",
-        "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
-    }
+    //{
+    //    "key": "g d",
+    //    "command": "editor.action.revealDefinition",
+    //    "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+    //}
 ]

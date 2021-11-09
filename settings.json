@@ -2,7 +2,6 @@
     "workbench.colorTheme": "Default Dark+",
     "editor.fontFamily": "'JetBrains Mono NL', Consolas, 'Courier New', monospace",
     "workbench.sideBar.location": "right",
-    
     "workbench.colorCustomizations": 
     {
         "editor.background": "#000000",
@@ -37,6 +36,7 @@
     "vscode-neovim.neovimExecutablePaths.win32": "C:\\Program Files\\Neovim\\bin\\nvim.exe",
     "editor.bracketPairColorization.enabled": true,
     "editor.fontLigatures": true,
+    // "vscode-neovim.neovimInitVimPaths.linux": "$HOME/.config/nvim/init.vim",
     "vscode-neovim.neovimInitVimPaths.win32": "C:\\Users\\Blue\\AppData\\Local\\nvim\\init.vim",
     "editor.inlineSuggest.enabled": true,
     "editor.minimap.enabled": false,
@@ -57,19 +57,13 @@
     "gitlens.hovers.currentLine.over": "line",
     "gitlens.currentLine.enabled": false,
     "gitlens.codeLens.enabled": false,
-
-    // Disabling Intellisense for CP
-    "editor.quickSuggestions": {
-        "other": false,
-        "comments": false,
-        "strings": false
-    },
     "editor.suggestOnTriggerCharacters": false,
     "window.zoomLevel": 1,
     "workbench.iconTheme": "material-icon-theme",
     "editor.cursorStyle": "block",
     "terminal.integrated.cursorBlinking": true,
-    "editor.guides.bracketPairs": "active",
+    "editor.guides.bracketPairs": true,
     "spotify.statusCheckInterval": 1000,
-    "editor.guides.bracketPairsHorizontal": false
+    "editor.guides.bracketPairsHorizontal": false,
+    "yaclock.hour12": true
 }

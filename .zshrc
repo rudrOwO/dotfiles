@@ -81,9 +81,8 @@ plugins=(
     git
     zsh-autosuggestions
     zsh-syntax-highlighting
-    zsh-interactive-cd
     npm
-    web-search
+    sudo
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -108,11 +107,9 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias 'goo=google'
 
 # Custom keybindings
-zle -N '\t'
-bindkey '\^[[Z' '\t'
+bindkey '\' expand-or-complete
 bindkey '\t' end-of-line
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.

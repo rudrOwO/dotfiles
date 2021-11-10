@@ -1,9 +1,10 @@
 nnoremap Y y$
-set clipboard+=unnamedplus
+"set clipboard+=unnamedplus
 set nrformats+=alpha
 
 if exists('g:vscode')
-    nnoremap <silent> <gd> :call VSCodeNotify('editor.action.revealDefinition')
+    "nnoremap <silent> tt :call VSCodeNotify('editor.action.revealDefinition')<CR>
+
 else
     inoremap {<cr> {<cr>}<c-o><s-o>
     inoremap ii <Esc>

@@ -1,4 +1,5 @@
 {
+    "workbench.list.automaticKeyboardNavigation": false,
     "workbench.colorTheme": "Default Dark+",
     "editor.fontFamily": "'JetBrains Mono NL', Consolas, 'Courier New', monospace",
     "workbench.sideBar.location": "right",
@@ -38,7 +39,6 @@
     // "vscode-neovim.neovimInitVimPaths.linux": "$HOME/.config/nvim/init.vim",
     "vscode-neovim.neovimInitVimPaths.win32": "C:\\Users\\Blue\\AppData\\Local\\nvim\\init.vim",
     "editor.inlineSuggest.enabled": true,
-    "editor.minimap.enabled": false,
     "terminal.integrated.useWslProfiles": true,
     "terminal.integrated.defaultProfile.windows": "Ubuntu-20.04 (WSL)",
     "settingsSync.ignoredExtensions": [
@@ -1032,5 +1032,6 @@
             "command": "workbench.action.toggleZenMode"
         }
     ],
-    "workbench.editor.showTabs": true
+    "workbench.editor.showTabs": true,
+    "editor.minimap.enabled": false
 }

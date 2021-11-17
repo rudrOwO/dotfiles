@@ -5,7 +5,7 @@ set nrformats+=alpha
 if exists('g:vscode')
     "nnoremap <silent> gd :call VSCodeNotify('editor.action.revealDefinition')<CR>
     nnoremap <silent> <Space> :call VSCodeNotify('whichkey.show')<CR>
-
+	
 else
     inoremap {<cr> {<cr>}<c-o><s-o>
     inoremap ii <Esc>

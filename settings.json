@@ -1,17 +1,18 @@
 {
     "workbench.list.automaticKeyboardNavigation": false,
-    "workbench.colorTheme": "Default Dark+",
-    "editor.fontFamily": "'JetBrains Mono NL', Consolas, 'Courier New', monospace",
+    "workbench.colorTheme": "Gruvbox Dark Hard",
+    "editor.fontFamily": "'FiraCode Nerd Font', 'JetBrainsMono NF', Consolas, monospace",
+    "editor.fontLigatures": true,
     "workbench.sideBar.location": "right",
     "workbench.colorCustomizations": {
         "editor.background": "#000000",
         "activityBar.background": "#000000",
         "sideBar.background": "#000000",
         "editorGroupHeader.tabsBackground": "#000000",
-        "statusBar.background": "#007add",
+        "statusBar.background": "#cd3132",
         "statusBar.foreground": "#ffffff",
-        //"statusBar.border": "#007add",
-        "editorCursor.foreground": "#007add",
+        //"statusBar.border": "#cd3132",
+        "editorCursor.foreground": "#cd3132",
         "editorCursor.background": "#ffffff",
         "sideBar.border": "#5c5c5c",
         "terminal.ansiBlack": "#000000",
@@ -29,13 +30,13 @@
         "terminal.ansiMagenta": "#BC3FBC",
         "terminal.ansiRed": "#CD3131",
         "terminal.ansiWhite": "#E5E5E5",
-        "terminal.ansiYellow": "#E5E510"
+        "terminal.ansiYellow": "#E5E510",
+        "terminal.background": "#000000"
     },
     "files.autoSave": "onFocusChange",
     //"vscode-neovim.neovimExecutablePaths.linux": "/usr/local/bin/nvim",
     "vscode-neovim.neovimExecutablePaths.win32": "C:\\Program Files\\Neovim\\bin\\nvim.exe",
     "editor.bracketPairColorization.enabled": true,
-    "editor.fontLigatures": true,
     // "vscode-neovim.neovimInitVimPaths.linux": "$HOME/.config/nvim/init.vim",
     "vscode-neovim.neovimInitVimPaths.win32": "C:\\Users\\Blue\\AppData\\Local\\nvim\\init.vim",
     "editor.inlineSuggest.enabled": true,
@@ -44,8 +45,6 @@
     "settingsSync.ignoredExtensions": [
         "ms-vscode-remote.remote-wsl"
     ],
-    "polacode.target": "snippet",
-    "polacode.backgroundColor": "#101010",
     "github.copilot.enable": {
         "*": false,
         "yaml": false,
@@ -54,14 +53,11 @@
         "cpp": false
     },
     "gitlens.hovers.currentLine.over": "line",
-    "gitlens.currentLine.enabled": false,
-    "gitlens.codeLens.enabled": false,
-    "editor.suggestOnTriggerCharacters": false,
+    "editor.suggestOnTriggerCharacters": true,
     "workbench.iconTheme": "material-icon-theme",
     "editor.cursorStyle": "block",
     "terminal.integrated.cursorBlinking": true,
     "editor.guides.bracketPairs": true,
-    "spotify.statusCheckInterval": 1000,
     "editor.guides.bracketPairsHorizontal": false,
     "yaclock.hour12": true,
     
@@ -1033,7 +1029,11 @@
     ],
     "workbench.editor.showTabs": true,
     "editor.minimap.enabled": false,
-    "editor.fontSize": 16,
-    "terminal.integrated.fontSize": 16,
-    "liveServer.settings.donotShowInfoMsg": true
+    "liveServer.settings.donotShowInfoMsg": true,
+    "window.zoomLevel": 1,
+    "gitlens.codeLens.enabled": false,
+    "gitlens.currentLine.enabled": false,
+    "emmet.showSuggestionsAsSnippets": true,
+    "emmet.triggerExpansionOnTab": true,
+    "codesnap.backgroundColor": "#101010",
 }

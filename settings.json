@@ -1,6 +1,5 @@
 {
     "workbench.list.automaticKeyboardNavigation": false,
-    "workbench.colorTheme": "Gruvbox Dark Hard",
     "editor.fontFamily": "'FiraCode Nerd Font', 'JetBrainsMono NF', Consolas, monospace",
     "editor.fontLigatures": true,
     "workbench.sideBar.location": "right",
@@ -10,11 +9,11 @@
         "sideBar.background": "#000000",
         "editorGroupHeader.tabsBackground": "#000000",
         "statusBar.background": "#cd3132",
-        "statusBar.foreground": "#ffffff",
-        //"statusBar.border": "#cd3132",
-        "editorCursor.foreground": "#cd3132",
-        "editorCursor.background": "#ffffff",
-        "sideBar.border": "#5c5c5c",
+        "statusBar.foreground": "#E5E5E5",
+        //"statusBar.border": "#CD3132",
+        "editorCursor.foreground": "#CD3132",
+        "editorCursor.background": "#E5E5E5",
+        "sideBar.border": "#5C5C5C",
         "terminal.ansiBlack": "#000000",
         "terminal.ansiBlue": "#2472C8",
         "terminal.ansiBrightCyan": "#29B8DB",
@@ -31,7 +30,8 @@
         "terminal.ansiRed": "#CD3131",
         "terminal.ansiWhite": "#E5E5E5",
         "terminal.ansiYellow": "#E5E510",
-        "terminal.background": "#000000"
+        "terminal.background": "#000000",
+        "terminal.foreground": "#E5E5E5"
     },
     "files.autoSave": "onFocusChange",
     //"vscode-neovim.neovimExecutablePaths.linux": "/usr/local/bin/nvim",
@@ -1036,4 +1036,13 @@
     "emmet.showSuggestionsAsSnippets": true,
     "emmet.triggerExpansionOnTab": true,
     "codesnap.backgroundColor": "#101010",
+    "editor.cursorSmoothCaretAnimation": true,
+    "editor.formatOnSave": true,
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "workbench.colorTheme": "Material Dark Theme",
 }

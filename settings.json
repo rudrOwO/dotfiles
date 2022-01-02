@@ -10,10 +10,10 @@
         "editorGroupHeader.tabsBackground": "#000000",
         "statusBar.background": "#cd3132",
         "statusBar.foreground": "#E5E5E5",
-        //"statusBar.border": "#CD3132",
+        // "statusBar.border": "#CD3132",
         "editorCursor.foreground": "#CD3132",
         "editorCursor.background": "#E5E5E5",
-        "sideBar.border": "#5C5C5C",
+        // "sideBar.border": "#5C5C5C",
         "terminal.ansiBlack": "#000000",
         "terminal.ansiBlue": "#2472C8",
         "terminal.ansiBrightCyan": "#29B8DB",
@@ -31,7 +31,9 @@
         "terminal.ansiWhite": "#E5E5E5",
         "terminal.ansiYellow": "#E5E510",
         "terminal.background": "#000000",
-        "terminal.foreground": "#E5E5E5"
+        "terminal.foreground": "#E5E5E5",
+        "scrollbarSlider.hoverBackground": "#101010",
+        "focusBorder": "#cd3132"
     },
     "files.autoSave": "onFocusChange",
     //"vscode-neovim.neovimExecutablePaths.linux": "/usr/local/bin/nvim",
@@ -1030,7 +1032,6 @@
     "workbench.editor.showTabs": true,
     "editor.minimap.enabled": false,
     "liveServer.settings.donotShowInfoMsg": true,
-    "window.zoomLevel": 1,
     "gitlens.codeLens.enabled": false,
     "gitlens.currentLine.enabled": false,
     "emmet.showSuggestionsAsSnippets": true,
@@ -1045,4 +1046,5 @@
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "workbench.colorTheme": "Material Dark Theme",
+    "window.zoomLevel": 1,
 }

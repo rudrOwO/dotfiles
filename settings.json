@@ -32,7 +32,8 @@
         "terminal.ansiYellow": "#E5E510",
         "terminal.background": "#000000",
         "terminal.foreground": "#E5E5E5",
-        "scrollbarSlider.hoverBackground": "#101010",
+        "scrollbarSlider.background": "#121212",
+        "scrollbarSlider.hoverBackground": "#121212",
         "focusBorder": "#cd3132"
     },
     "files.autoSave": "onFocusChange",

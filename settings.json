@@ -8,7 +8,7 @@
         "activityBar.background": "#000000",
         "sideBar.background": "#000000",
         "editorGroupHeader.tabsBackground": "#000000",
-        "statusBar.background": "#cd3132",
+        "statusBar.background": "#CD3132",
         "statusBar.foreground": "#E5E5E5",
         // "statusBar.border": "#CD3132",
         "editorCursor.foreground": "#CD3132",
@@ -1047,5 +1047,7 @@
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "workbench.colorTheme": "Material Dark Theme",
+    "prettier.tabWidth": 4,
+    "prettier.useTabs": true,
     "window.zoomLevel": 1,
 }

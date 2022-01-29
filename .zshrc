@@ -120,3 +120,8 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh # Fuzzy Finder
+
+# Test to see if VSCode WSL client if running [ specific to windows ]
+if [[ $(pgrep node) = "" ]]; then
+    cd ~/Dev
+fi

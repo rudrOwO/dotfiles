@@ -2,18 +2,21 @@
     "workbench.list.automaticKeyboardNavigation": false,
     "editor.fontFamily": "'FiraCode Nerd Font', 'JetBrainsMono NF', Consolas, monospace",
     "editor.fontLigatures": true,
+    "editor.fontWeight": "350",
     "workbench.sideBar.location": "right",
+    "workbench.colorTheme": "One Dark Pro Darker",
     "workbench.colorCustomizations": {
         "editor.background": "#000000",
         "activityBar.background": "#000000",
         "sideBar.background": "#000000",
         "editorGroupHeader.tabsBackground": "#000000",
         "statusBar.background": "#CD3132",
+        "statusBar.noFolderBackground": "#CD3132",
         "statusBar.foreground": "#E5E5E5",
         // "statusBar.border": "#CD3132",
         "editorCursor.foreground": "#CD3132",
         "editorCursor.background": "#E5E5E5",
-        // "sideBar.border": "#5C5C5C",
+        "sideBar.border": "#5C5C5C",
         "terminal.ansiBlack": "#000000",
         "terminal.ansiBlue": "#2472C8",
         "terminal.ansiBrightCyan": "#29B8DB",
@@ -54,6 +57,9 @@
         "plaintext": false,
         "markdown": false,
         "cpp": false
+    },
+    "remote.extensionKind": {
+        "shyykoserhiy.vscode-spotify": "ui"
     },
     "gitlens.hovers.currentLine.over": "line",
     "editor.suggestOnTriggerCharacters": true,
@@ -1039,15 +1045,21 @@
     "emmet.triggerExpansionOnTab": true,
     "codesnap.backgroundColor": "#101010",
     "editor.cursorSmoothCaretAnimation": true,
-    "editor.formatOnSave": true,
     "[html]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "[javascript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "workbench.colorTheme": "Material Dark Theme",
     "prettier.tabWidth": 4,
-    "prettier.useTabs": true,
     "window.zoomLevel": 1,
+    "workbench.startupEditor": "none",
+    "spotify.showSignOutButton": false,
+    "spotify.statusCheckInterval": 1000,
+    "spotify.showMuteUnmuteVolumeButton": false,
+    "spotify.showPlayPauseButton": false,
+    "spotify.showPauseButton": true,
+    "spotify.showPlayButton": true,
+    "spotify.showPreviousButton": false,
+    "spotify.showNextButton": false,
 }

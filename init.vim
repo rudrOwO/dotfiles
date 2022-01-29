@@ -44,7 +44,7 @@ else
     let g:gruvbox_contrast_dark='hard'
     let g:airline_powerline_fonts=1
 
-    colorscheme material
+    colorscheme gruvbox
 
     "Auto-save on focus change
     "au FocusLost * :wa

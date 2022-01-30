@@ -10,7 +10,7 @@ fi
 export PATH=$HOME/.local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/blue/.oh-my-zsh"
+export ZSH="/home/rudro/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -111,6 +111,10 @@ source $ZSH/oh-my-zsh.sh
 # Custom keybindings
 bindkey '\' expand-or-complete
 bindkey '\t' end-of-line
+bindkey '^k' up-line-or-search
+bindkey '^j' down-line-or-search
+bindkey '^h' backward-word
+bindkey '^l' forward-word
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

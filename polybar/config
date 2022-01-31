@@ -38,7 +38,7 @@ alert = ${xrdb:color1:#bd2c40}
 margin-top = 0
 margin-bottom = 0
 
-[bar/bottom]
+[bar/top]
 monitor = ${env:MONITOR:}
 width = 100%
 height = 30
@@ -46,7 +46,7 @@ offset-x = 0%
 offset-y = 0
 radius = 0
 fixed-center = true
-bottom = true
+bottom = false
 
 background = ${colors.background}
 foreground = ${colors.foreground}
@@ -87,50 +87,50 @@ wm-restack = i3
 cursor-click = pointer
 cursor-scroll = ns-resize
 
-;[bar/bottom]
-;monitor = ${env:MONITOR:}
-;width = 100%
-;height = 30
-;offset-x = 0%
-;offset-y = 0
-;radius = 0
-;fixed-center = false
-;bottom = true
-;
-;wm-restack = bspwm
-;
-;background = ${colors.background}
-;foreground = ${colors.foreground}
-;
-;line-size = 3
-;line-color = #f00
-;
-;border-size = 2
-;border-color = ${colors.background-alt}
-;
-;padding-left = 2
-;padding-right = 2
-;
-;module-margin-left = 1
-;module-margin-right = 1
-;
-;font-0 = KoHo SemiBold:style=Regular:size=12;0
-;font-1 = Unifont:size=10:style=Medium;0
-;font-2 = FontAwesome:style=Regular:size=14
-;font-3 = Weather Icons:size=14;1
-;
-;modules-left = xkeyboard info-redshift-temp backlight-acpi
-;modules-center = mpd pulseaudio
-;modules-right = wlan eth
-;
-;tray-position = right
-;tray-padding = 1
-;tray-max-icons = 6
-;tray-transparent = false
-;tray-background = ${colors.background}
-;
-;cursor-click = pointer
-;cursor-scroll = ns-resize
+[bar/bottom]
+monitor = ${env:MONITOR:}
+width = 100%
+height = 30
+offset-x = 0%
+offset-y = 0
+radius = 0
+fixed-center = false
+bottom = true
+
+wm-restack = bspwm
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+line-size = 3
+line-color = #f00
+
+border-size = 2
+border-color = ${colors.background-alt}
+
+padding-left = 2
+padding-right = 2
+
+module-margin-left = 1
+module-margin-right = 1
+
+font-0 = KoHo SemiBold:style=Regular:size=12;0
+font-1 = Unifont:size=10:style=Medium;0
+font-2 = FontAwesome:style=Regular:size=14
+font-3 = Weather Icons:size=14;1
+
+modules-left = xkeyboard info-redshift-temp backlight-acpi
+modules-center = mpd pulseaudio
+modules-right = wlan eth
+
+tray-position = right
+tray-padding = 1
+tray-max-icons = 6
+tray-transparent = false
+tray-background = ${colors.background}
+
+cursor-click = pointer
+cursor-scroll = ns-resize
 
 [module/xwindow]
 type = internal/xwindow
@@ -397,6 +397,7 @@ format-connected-prefix = ""
 format-connected-prefix-foreground = ${colors.foreground-alt}
 label-connected = %local_ip% ↑%upspeed% ↓%downspeed%
 
+format-disconnected =
 ;format-disconnected = <label-disconnected>
 ;format-disconnected-underline = ${self.format-connected-underline}
 ;label-disconnected = %ifname% disconnected
@@ -569,26 +570,26 @@ menu-2-1-exec = menu-open-0
 
 ;[module/battery-combined-shell]
 ;type = custom/script
-;exec = ~/.config/polybar/battery-combined-shell.sh
+;exec = ~/bin/battery-combined-shell.sh
 ;interval = 10
 ;format-underline = ${xrdb:color14:#ffb52a}
 ;label-font = 1
+;
+;[module/battery-combined-tlp]
+;type = custom/script
+;exec = ~/bin/battery-combined-tlp.sh
+;interval = 10
+;label = %output:1%%
+;format-underline = ${xrdb:color14:#ffb52a}
 
-[module/battery-combined-tlp]
-type = custom/script
-exec = ~/.config/polybar/battery-combined-tlp.sh
-interval = 10
-label = %output:1%%
-format-underline = ${xrdb:color14:#ffb52a}
-
-[module/info-redshift-temp]
-type = custom/script
-exec = ~/.config/polybar/info-redshift-temp.sh
-interval = 5
-
+;[module/info-redshift-temp]
+;type = custom/script
+;exec = ~/bin/info-redshift-temp.sh
+;interval = 5
+;
 ;[module/openweathermap-fullfeatured]
 ;type = custom/script
-;exec = ~/.config/polybar/openweathermap-fullfeatured-with-key.sh
+;exec = ~/bin/openweathermap-fullfeatured-with-key.sh
 ;interval = 600
 ;label-font = 4
 

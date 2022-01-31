@@ -125,11 +125,21 @@ bindsym $super+j focus down
 bindsym $super+k focus up
 bindsym $super+l focus right
 
+bindsym $super+Left focus left
+bindsym $super+Down focus down
+bindsym $super+Up focus up
+bindsym $super+Right focus right
+
 # move focused window
 bindsym $super+Shift+h move left
 bindsym $super+Shift+j move down
 bindsym $super+Shift+k move up
 bindsym $super+Shift+l move right
+
+bindsym $super+Shift+Left move left
+bindsym $super+Shift+Down move down
+bindsym $super+Shift+Up move up
+bindsym $super+Shift+Right move right
 
 # split in horizontal orientation
 bindsym $super+z split h
@@ -225,7 +235,6 @@ bindsym $super+n border normal
 
 
 # panel
-# Start i3bar to display a workspace bar
 
 
 # Open specific applications in floating mode

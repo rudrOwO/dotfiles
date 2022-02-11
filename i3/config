@@ -16,27 +16,33 @@ set $alt Mod1
 ### Wallpaper: ###
 # - You need to specify homescreen wallpaper using azote
 
-set $lockScreenWallpaper /usr/share/wallpapers/garuda-wallpapers/Garuda-Desert.png
+set $lockScreenWallpaper /usr/share/wallpapers/garuda-wallpapers/'Black Eagle.png'
 
 ### Applications: ###
 
 set $preferredTerminalEmulator /usr/bin/alacritty
-set $preferredBrowser /usr/bin/firefox
+set $preferredBrowser /usr/bin/google-chrome-stable
 set $preferredFileManager /usr/bin/thunar
-set $preferredMailClient /usr/bin/geary
-set $preferredTextEditor /usr/bin/geany
+set $preferredCodeEditor /usr/bin/code
 set $preferredScreenCaptureTool /usr/bin/flameshot gui
 
-###########################################
-### Commonly Used Application Keybinds: ###
-###########################################
+### Workspace Names ###
+set $ws1 1
+set $ws2 2
+set $ws3 3
+set $ws4 4
+set $ws5 5
+set $ws6 6
+set $ws7 7
+set $ws8 8
+set $ws9 9
 
+### Commonly Used Application Keybinds: ###
 bindsym $super+F1 exec $preferredBrowser;focus
 bindsym $super+F2 exec $preferredFileManager;focus
-bindsym $super+F3 exec $preferredTextEditor;focus
+bindsym $super+F3 exec $preferredCodeEditor;focus
 
 ### Screen Capturing & Print Screen: ###
-
 bindsym $super+F9 exec $preferredScreenCaptureTool
 bindsym Print exec --no-startup-id $preferredScreenCaptureTool
 
@@ -56,8 +62,8 @@ floating_modifier $super
 #exec --no-startup-id ~/.fehbg
 exec --no-startup-id xsettingsd &
 exec --no-startup-id pasystray
-exec --no-startup-id conky
-exec --no-startup-id conky -c ~/.config/conky/conky-shcts
+#exec --no-startup-id conky
+#exec --no-startup-id conky -c ~/.config/conky/conky-shcts
 exec --no-startup-id copyq
 exec --no-startup-id dunst
 #exec --no-startup-id dex -a -s /etc/xdg/autostart/:~/.config/autostart/
@@ -76,21 +82,21 @@ exec --no-startup-id picom -b
 exec --no-startup-id nitrogen --restore
 
 # hide/unhide i3status bar
-bindsym $super+m bar mode toggle
+# bindsym $super+m bar mode toggle
 
 # start dmenu (a program launcher)
-bindsym $super+d exec i3-dmenu-desktop --dmenu="dmenu -i -fn 'Noto Sans:size=14'"
-# bindsym $super+d exec rofi -lines 12 -padding 18 -width 60 -location 0 -show drun -sidebar-mode -columns 3 -font 'Noto Sans 20'
+bindsym $super+o exec i3-dmenu-desktop --dmenu="dmenu -i -fn 'Noto Sans:size=15'"
+bindsym $super+d exec rofi -lines 5 -padding 18 -width 30 -location 0 -show window -sidebar-mode -columns 3 -font 'Noto Sans 16'
 
 # Garuda Linux install
-bindsym $super+i exec sudo -E calamares
+# bindsym $super+i exec sudo -E calamares
 
 # Lock screen
-# bindsym $super+l exec i3lock -i $lockScreenWallpaper
+bindsym $super+Escape exec i3lock -ti $lockScreenWallpaper
 
 # Screen brightness controls
-bindsym XF86MonBrightnessUp exec "xbacklight -inc 10; notify-send 'brightness up'"
-bindsym XF86MonBrightnessDown exec "xbacklight -dec 10; notify-send 'brightness down'"
+# bindsym XF86MonBrightnessUp exec "xbacklight -inc 10; notify-send 'brightness up'"
+# bindsym XF86MonBrightnessDown exec "xbacklight -dec 10; notify-send 'brightness down'"
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -111,7 +117,6 @@ bindsym XF86AudioPlay exec playerctl toggle
 bindsym XF86AudioStop exec playerctl stop
 
 # Print screen
-
 bindsym $super+Print --release exec --no-startup-id i3-scrot -w
 bindsym $super+Shift+Print --release exec --no-startup-id i3-scrot -s
 
@@ -180,34 +185,34 @@ bindsym $super+Ctrl+Left workspace prev
 # switch to workspace
 bindsym $alt+Control+Right workspace next
 bindsym $alt+Control+Left workspace prev
-bindsym $super+1 workspace 1
-bindsym $super+2 workspace 2
-bindsym $super+3 workspace 3
-bindsym $super+4 workspace 4
-bindsym $super+5 workspace 5
-bindsym $super+6 workspace 6
-bindsym $super+7 workspace 7
-bindsym $super+8 workspace 8
+bindsym $super+1 workspace $ws1
+bindsym $super+2 workspace $ws2
+bindsym $super+3 workspace $ws3
+bindsym $super+4 workspace $ws4
+bindsym $super+5 workspace $ws5
+bindsym $super+6 workspace $ws6
+bindsym $super+7 workspace $ws7
+bindsym $super+8 workspace $ws8
 
 # move focused container to workspace
-bindsym $super+Shift+1 move container to workspace 1
-bindsym $super+Shift+2 move container to workspace 2
-bindsym $super+Shift+3 move container to workspace 3
-bindsym $super+Shift+4 move container to workspace 4
-bindsym $super+Shift+5 move container to workspace 5
-bindsym $super+Shift+6 move container to workspace 6
-bindsym $super+Shift+7 move container to workspace 7
-bindsym $super+Shift+8 move container to workspace 8
+bindsym $alt+Shift+1 move container to workspace $ws1
+bindsym $alt+Shift+2 move container to workspace $ws2
+bindsym $alt+Shift+3 move container to workspace $ws3
+bindsym $alt+Shift+4 move container to workspace $ws4
+bindsym $alt+Shift+5 move container to workspace $ws5
+bindsym $alt+Shift+6 move container to workspace $ws6
+bindsym $alt+Shift+7 move container to workspace $ws7
+bindsym $alt+Shift+8 move container to workspace $ws8
 
 # Move to workspace with focused container
-bindsym $alt+Shift+1 move container to workspace 1; workspace 1
-bindsym $alt+Shift+2 move container to workspace 2; workspace 2
-bindsym $alt+Shift+3 move container to workspace 3; workspace 3
-bindsym $alt+Shift+4 move container to workspace 4; workspace 4
-bindsym $alt+Shift+5 move container to workspace 5; workspace 5
-bindsym $alt+Shift+6 move container to workspace 6; workspace 6
-bindsym $alt+Shift+7 move container to workspace 7; workspace 7
-bindsym $alt+Shift+8 move container to workspace 8; workspace 8
+bindsym $super+Shift+1 move container to workspace $ws1; workspace $ws1
+bindsym $super+Shift+2 move container to workspace $ws2; workspace $ws2
+bindsym $super+Shift+3 move container to workspace $ws3; workspace $ws3
+bindsym $super+Shift+4 move container to workspace $ws4; workspace $ws4
+bindsym $super+Shift+5 move container to workspace $ws5; workspace $ws5
+bindsym $super+Shift+6 move container to workspace $ws6; workspace $ws6
+bindsym $super+Shift+7 move container to workspace $ws7; workspace $ws7
+bindsym $super+Shift+8 move container to workspace $ws8; workspace $ws8
 
 # reload the configuration file
 bindsym $super+Shift+c reload
@@ -290,12 +295,12 @@ client.background           #2f343f
 ### settings for i3-gaps: ###
 #############################
 
-# Removing border
-for_window [class=".*"] border pixel 2
+# Setting border
+for_window [class=".*"] border pixel 1
 
 # Set inner/outer gaps
-gaps inner 8
-gaps outer 8
+gaps inner 12
+gaps outer 0
 
 # Additionally, you can issue commands with the following syntax. This is useful to bind keys to changing the gap size.
 # gaps inner|outer current|all set|plus|minus <px>
@@ -303,11 +308,11 @@ gaps outer 8
 # gaps outer all plus 5
 
 # Smart gaps (gaps used if only more than one container on the workspace)
-smart_gaps on
+# smart_gaps on
 
 # Smart borders (draw borders around container only if it is not the only container on this workspace)
 # on|no_gaps (on=always activate and no_gaps=only activate if the gap size to the edge of the screen is 0)
-smart_borders on
+# smart_borders on
 
 # Press $mod+Shift+g to enter the gap mode. Choose o or i for modifying outer/inner gaps. Press one of + / - (in-/decrement for current workspace) or 0 (remove gaps for current workspace). If you also press Shift with these keys, the change will be global for all workspaces.
 set $mode_gaps Gaps: (o) outer, (i) inner

@@ -112,9 +112,8 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 
 # music control
 bindsym XF86AudioNext exec playerctl next
-bindsym XF86AudioPrev exec playerctl prev
-bindsym XF86AudioPlay exec playerctl toggle
-bindsym XF86AudioStop exec playerctl stop
+bindsym XF86AudioPrev exec playerctl previous
+bindsym XF86AudioPlay exec playerctl play-pause
 
 # Print screen
 bindsym $super+Print --release exec --no-startup-id i3-scrot -w

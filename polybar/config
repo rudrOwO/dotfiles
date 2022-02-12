@@ -30,9 +30,9 @@ background-alt = ${xrdb:color8:#000}
 ;foreground = ${xrdb:color7:#222}
 foreground = ${xrdb:foreground:#dfdfdf}
 foreground-alt = ${xrdb:color7:#444}
-primary = ${xrdb:color4:#cd3131}
+primary = ${xrdb:color4:#cd3132}
 secondary = ${xrdb:color4:#555753}
-alert = ${xrdb:color1:#cd3131}
+alert = ${xrdb:color1:#cd3132}
 
 [global/wm]
 margin-top = 0
@@ -41,7 +41,7 @@ margin-bottom = 0
 [bar/top]
 monitor = ${env:MONITOR:}
 width = 100%
-height = 30
+height = 27
 offset-x = 0%
 offset-y = 0
 radius = 0
@@ -57,8 +57,8 @@ line-color = #f00
 border-size = 3
 border-color = ${colors.background-alt}
 
-padding-left = 2
-padding-right = 2
+padding-left = 1
+padding-right = 3
 
 module-margin-left = 5
 module-margin-right = 1
@@ -194,7 +194,7 @@ label-empty-padding = 2
 type = internal/i3
 format = <label-state> <label-mode>
 index-sort = true
-wrapping-scroll = false
+wrapping-scroll = true
 
 ; Only show workspaces on the same output as the bar
 ;pin-workspaces = true
@@ -237,7 +237,7 @@ label-urgent-padding = ${module/bspwm.label-urgent-padding}
 label-urgent-font = 3
 
 ; Separator in between workspaces
-; label-separator = |
+label-separator = |
 
 [module/mpd]
 type = internal/mpd
@@ -331,11 +331,12 @@ interval = 0.2
 format-prefix =
 format = <label> <ramp-coreload>
 format-prefix-foreground = ${colors.foreground-alt}
-format-underline = ${colors.primary}
-label = %percentage:2%%
+; format-underline = ${colors.primary}
+label = CPU: %percentage%%
 label-font = 5
 
 ramp-coreload-spacing = 1
+ramp-coreload-foreground = ${colors.primary}
 ramp-coreload-font = 3
 ramp-coreload-0 = ▁
 ramp-coreload-1 = ▂

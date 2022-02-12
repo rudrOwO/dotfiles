@@ -21,7 +21,7 @@ set $lockScreenWallpaper /usr/share/wallpapers/garuda-wallpapers/'Black Eagle.pn
 ### Applications: ###
 
 set $preferredTerminalEmulator /usr/bin/alacritty
-set $preferredBrowser /usr/bin/google-chrome-stable
+set $preferredBrowser /usr/bin/firefox-developer-edition
 set $preferredFileManager /usr/bin/thunar
 set $preferredCodeEditor /usr/bin/code
 set $preferredScreenCaptureTool /usr/bin/flameshot gui
@@ -78,7 +78,7 @@ exec_always --no-startup-id ${HOME}/.config/polybar/launch.sh
 exec_always --no-startup-id numlockx on
 exec blueberry-tray
 exec --no-startup-id java -Xmx1024m -jar "/opt/xdman/xdman.jar" -m
-exec --no-startup-id picom -b
+exec --no-startup-id picom -b --experimental-backends
 exec --no-startup-id nitrogen --restore
 
 # hide/unhide i3status bar
@@ -100,8 +100,8 @@ bindsym $super+Escape exec i3lock -ti $lockScreenWallpaper
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && $refresh_i3status
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && $refresh_i3status
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 #change volume
@@ -155,7 +155,9 @@ bindsym $super+v split v
 bindsym $super+f fullscreen toggle
 
 # change container layout split
-bindsym $super+s layout toggle split
+bindsym $super+s layout stacking
+bindsym $super+w layout tabbed
+bindsym $super+e layout toggle split
 
 # toggle tiling / floating
 bindsym $super+space floating toggle

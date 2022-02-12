@@ -7,7 +7,8 @@
     },
     {
         "key": "ctrl+h",
-        "command": "workbench.action.navigateLeft"
+        "command": "workbench.action.navigateLeft",
+        "when": "!terminalFocus"
     },
     {
         "key": "ctrl+l",
@@ -16,12 +17,13 @@
     },
     {
         "key": "ctrl+k",
-        "command": "workbench.action.navigateUp"
+        "command": "workbench.action.navigateUp",
+        "when": "!terminalFocus"
     },
     {
         "key": "ctrl+j",
         "command": "workbench.action.navigateDown",
-        "when": "editorTextFocus"
+        "when": "!terminalFocus"
     },
     {
         "key": "ctrl+w",
@@ -150,11 +152,6 @@
         "key": "ctrl+l",
         "when": "sideBarFocus",
         "command": "workbench.action.focusActiveEditorGroup"
-    },
-    {
-        "key": "ctrl+k",
-        "command": "workbench.action.focusActiveEditorGroup",
-        "when": "terminalFocus"
     },
     {
         "key": "ctrl+shift+t",

@@ -1,8 +1,7 @@
 {
     "workbench.list.automaticKeyboardNavigation": false,
-    "editor.fontFamily": "'MesloLGS NF', monospace",
-    "editor.fontWeight": "500",
-    // "editor.fontLigatures": true,
+    "editor.fontFamily": "'Fira Code Retina', 'MesloLGS NF', monospace",
+    "editor.fontLigatures": true,
     "editor.fontSize": 15,
     "workbench.sideBar.location": "right",
     "workbench.colorCustomizations": {
@@ -44,13 +43,11 @@
     "files.autoSave": "onFocusChange",
     "vscode-neovim.neovimExecutablePaths.linux": "/usr/bin/nvim",
     "editor.bracketPairColorization.enabled": true,
-     "vscode-neovim.neovimInitVimPaths.linux": "$HOME/.config/nvim/init.vim",
+    "vscode-neovim.neovimInitVimPaths.linux": "$HOME/.config/nvim/init.vim",
     "editor.inlineSuggest.enabled": true,
     "terminal.integrated.useWslProfiles": true,
     "terminal.integrated.defaultProfile.windows": "Ubuntu-20.04 (WSL)",
-    "settingsSync.ignoredExtensions": [
-        "ms-vscode-remote.remote-wsl"
-    ],
+    "settingsSync.ignoredExtensions": ["ms-vscode-remote.remote-wsl"],
     "github.copilot.enable": {
         "*": false,
         "yaml": false,
@@ -68,8 +65,7 @@
     "editor.guides.bracketPairs": true,
     "editor.guides.bracketPairsHorizontal": false,
     "yaclock.hour12": true,
-    
-    
+
     //Whichkey Settings
     "whichkey.sortOrder": "alphabetically",
     "whichkey.delay": 0,
@@ -1065,4 +1061,6 @@
     "workbench.colorTheme": "Ayu Mirage Bordered",
     "glassit.alpha": 220,
     "editor.formatOnSave": true,
+    "terminal.integrated.allowChords": false,
+    "terminal.integrated.fontFamily": " 'MesloLGS NF'"
 }

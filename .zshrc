@@ -108,13 +108,16 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# Custom keybindings
+# Vim-like keybindings for zsh
 bindkey '\' expand-or-complete
 bindkey '\t' end-of-line
 bindkey '^k' up-line-or-search
 bindkey '^j' down-line-or-search
-bindkey '^h' backward-word
-bindkey '^l' forward-word
+bindkey '^w' forward-word
+bindkey '^b' backward-word
+bindkey '^[[Z' backward-kill-word
+bindkey '^h' vi-backward-char
+bindkey '^l' vi-forward-char
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -126,6 +129,6 @@ export NVM_DIR="$HOME/.nvm"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh # Fuzzy Finder
 
 # Test to see if VSCode WSL client if running [ specific to windows ]
-if [[ $(pgrep node) = "" ]]; then
+if [[ $(pgrep code) = "" ]]; then
     cd ~/Dev
 fi

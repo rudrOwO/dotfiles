@@ -24,6 +24,7 @@ set $preferredTerminalEmulator /usr/bin/alacritty
 set $preferredBrowser /usr/bin/firefox-developer-edition
 set $preferredFileManager /usr/bin/thunar
 set $preferredCodeEditor /usr/bin/code
+set $preferredCalculator /usr/bin/galculator
 set $preferredScreenCaptureTool /usr/bin/flameshot gui
 
 ### Workspace Names ###
@@ -41,6 +42,7 @@ set $ws9 9
 bindsym $super+F1 exec $preferredBrowser;focus
 bindsym $super+F2 exec $preferredFileManager;focus
 bindsym $super+F3 exec $preferredCodeEditor;focus
+bindsym $super+F4 exec $preferredCalculator;focus
 
 ### Screen Capturing & Print Screen: ###
 bindsym $super+F9 exec $preferredScreenCaptureTool
@@ -80,6 +82,7 @@ exec blueberry-tray
 exec --no-startup-id java -Xmx1024m -jar "/opt/xdman/xdman.jar" -m
 exec --no-startup-id picom -b --experimental-backends
 exec --no-startup-id nitrogen --restore
+exec --no-startup-id devilspie
 
 # hide/unhide i3status bar
 # bindsym $super+m bar mode toggle
@@ -263,6 +266,7 @@ for_window [title="About Pale Moon"] floating enable
 for_window [class="Pamac-manager"] floating enable
 for_window [class="Pamac-updater"] floating enable
 for_window [class="Pavucontrol"] floating enable
+for_window [class="zoom"] floating enable
 for_window [class="Qtconfig-qt4"] floating enable border normal
 for_window [class="qt5ct"] floating enable sticky enable border normal
 #for_window [title="sudo"] floating enable border normal

@@ -78,11 +78,11 @@ exec --no-startup-id xfce4-power-manager
 exec_always --no-startup-id setcursor
 exec_always --no-startup-id ${HOME}/.config/polybar/launch.sh
 exec_always --no-startup-id numlockx on
-exec_always --no-startup-id devilspie -a
 exec blueberry-tray
 exec --no-startup-id java -Xmx1024m -jar "/opt/xdman/xdman.jar" -m
 exec --no-startup-id picom -b --experimental-backends
 exec --no-startup-id nitrogen --restore
+exec --no-startup-id devilspie -a
 
 # hide/unhide i3status bar
 # bindsym $super+m bar mode toggle
@@ -300,7 +300,7 @@ for_window [class=URxvt|firefox|Geany|Evince|Soffice|libreoffice*|mpv|Ghb|Xfburn
 for_window [class=Xfburn|GParted|System-config-printer.py|Lxtask|Pavucontrol|Exo-helper*|Lxrandr|Arandr] focus
 
 # colour of border, background, text, indicator, and child_border
-client.focused              #bf616a #2f343f #d8dee8 #bf616a #cd3131
+client.focused              #bf616a #2f343f #d8dee8 #cd3132 #cd3132
 client.focused_inactive     #2f343f #2f343f #d8dee8 #2f343f #2f343f
 client.unfocused            #2f343f #2f343f #d8dee8 #2f343f #2f343f
 client.urgent               #2f343f #2f343f #d8dee8 #2f343f #2f343f
@@ -326,7 +326,7 @@ gaps outer 0
 # gaps outer all plus 5
 
 # Smart gaps (gaps used if only more than one container on the workspace)
-# smart_gaps on
+smart_gaps on
 
 # Smart borders (draw borders around container only if it is not the only container on this workspace)
 # on|no_gaps (on=always activate and no_gaps=only activate if the gap size to the edge of the screen is 0)

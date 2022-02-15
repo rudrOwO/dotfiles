@@ -62,7 +62,7 @@ font pango: source code pro 10
 floating_modifier $super
 
 #exec --no-startup-id ~/.fehbg
-exec --no-startup-id xsettingsd &
+#exec --no-startup-id xsettingsd &
 exec --no-startup-id pasystray
 #exec --no-startup-id conky
 #exec --no-startup-id conky -c ~/.config/conky/conky-shcts
@@ -78,11 +78,11 @@ exec --no-startup-id xfce4-power-manager
 exec_always --no-startup-id setcursor
 exec_always --no-startup-id ${HOME}/.config/polybar/launch.sh
 exec_always --no-startup-id numlockx on
+exec_always --no-startup-id devilspie -a
 exec blueberry-tray
 exec --no-startup-id java -Xmx1024m -jar "/opt/xdman/xdman.jar" -m
 exec --no-startup-id picom -b --experimental-backends
 exec --no-startup-id nitrogen --restore
-exec --no-startup-id devilspie
 
 # hide/unhide i3status bar
 # bindsym $super+m bar mode toggle
@@ -137,16 +137,30 @@ bindsym $super+Down focus down
 bindsym $super+Up focus up
 bindsym $super+Right focus right
 
+# shift focus to newly introduced window
+mouse_warping none
+
 # move focused window
 bindsym $super+Shift+h move left
 bindsym $super+Shift+j move down
 bindsym $super+Shift+k move up
 bindsym $super+Shift+l move right
-
+# ^^ Alternate bindings
 bindsym $super+Shift+Left move left
 bindsym $super+Shift+Down move down
 bindsym $super+Shift+Up move up
 bindsym $super+Shift+Right move right
+
+# swap windows
+bindsym $alt+Shift+h move left; focus right
+bindsym $alt+Shift+j move down; focus up
+bindsym $alt+Shift+k move up; focus down
+bindsym $alt+Shift+l move right; focus left
+# ^^ Alternate bindings
+bindsym $alt+Shift+Left move left; focus right
+bindsym $alt+Shift+Down move down; focus up
+bindsym $alt+Shift+Up move up; focus down
+bindsym $alt+Shift+Right move right; focus left
 
 # split in horizontal orientation
 bindsym $super+z split h
@@ -280,7 +294,6 @@ for_window [class="keepassxc"] floating enable
 for_window [class="garuda-welcome"] floating enable
 
 # window rules, you can find the window class using xprop
-for_window [class=".*"] border pixel 4
 assign [class=URxvt] 1
 for_window [class=Viewnior|feh|Audacious|File-roller|Lxappearance|Lxtask|Pavucontrol|upgrade2ultimate.sh] floating enable
 for_window [class=URxvt|firefox|Geany|Evince|Soffice|libreoffice*|mpv|Ghb|Xfburn|Gimp*|Inkscape|Vlc|Lxappearance|Audacity] focus

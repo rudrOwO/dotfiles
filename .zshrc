@@ -83,9 +83,14 @@ plugins=(
     zsh-syntax-highlighting
     npm
     sudo
+    copydir
 )
 
 source $ZSH/oh-my-zsh.sh
+
+# Navigation tools
+autoload n-list
+autoload n-cd
 
 # User configuration
 
@@ -108,9 +113,10 @@ source $ZSH/oh-my-zsh.sh
 alias zshconfig="nvim ~/.zshrc"
 alias grep="grep -i"
 
-# Vim-like keybindings for zsh
+# Use Tab and '\' for autocompletions
 bindkey '\' expand-or-complete
 bindkey '\t' end-of-line
+# Vim-like keybindings for zsh
 bindkey '^k' up-line-or-search
 bindkey '^j' down-line-or-search
 bindkey '^w' forward-word
@@ -121,12 +127,6 @@ bindkey '^l' vi-forward-char
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh # Fuzzy Finder
 
 # Test to see if VSCode WSL client if running [ specific to windows ]
 if [[ $(pgrep code) = "" ]]; then

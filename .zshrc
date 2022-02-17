@@ -7,7 +7,7 @@ fi
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-export PATH=$HOME/.local/bin:$PATH
+export PATH=$HOME/.local/bin:$HOME/.local/share/gem/ruby/3.0.0/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/rudro/.oh-my-zsh"
@@ -81,7 +81,6 @@ plugins=(
     git
     zsh-autosuggestions
     zsh-syntax-highlighting
-    npm
     sudo
     copydir
 )
@@ -112,6 +111,7 @@ autoload n-cd
 # Example aliases
 alias zshconfig="nvim ~/.zshrc"
 alias grep="grep -i"
+alias ls="colorls"
 
 # Use Tab and '\' for autocompletions
 bindkey '\' expand-or-complete
@@ -128,7 +128,11 @@ bindkey '^l' vi-forward-char
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-# Test to see if VSCode WSL client if running [ specific to windows ]
+# Auto-navigate to ~/Dev if vscode is not running
 if [[ $(pgrep code) = "" ]]; then
     cd ~/Dev
 fi
+
+# colorful ls
+# https://github.com/gretzky/auto-color-ls
+source $(dirname $(gem which colorls))/tab_complete.sh

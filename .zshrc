@@ -133,6 +133,6 @@ if [[ $(pgrep code) = "" ]]; then
     cd ~/Dev
 fi
 
-# colorful ls
-# https://github.com/gretzky/auto-color-ls
+# colorful ls | Uses Ruby
+# gem install colorls
 source $(dirname $(gem which colorls))/tab_complete.sh

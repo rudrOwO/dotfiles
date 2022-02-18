@@ -1,6 +1,6 @@
 [
     {
-        "command": "workbench.action.showCommands",
+        "command": "workbench.view.scm",
         "key": "Shift Shift",
     },
     {

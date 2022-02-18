@@ -87,7 +87,7 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
-# Navigation tools
+# cd into multiple directories
 autoload n-list
 autoload n-cd
 
@@ -128,11 +128,12 @@ bindkey '^l' vi-forward-char
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-# Auto-navigate to ~/Dev if vscode is not running
-if [[ $(pgrep code) = "" ]]; then
+# Auto-navigate to ~/Dev if Zsh is not running in integrated vscode terminal
+EMULATOR=$(ps -o sid= -p "$$" | xargs ps -o ppid= -p | xargs ps -o comm= -p)
+
+if [[ $EMULATOR != "code" ]]; then
     cd ~/Dev
 fi
 
-# colorful ls | Uses Ruby
-# gem install colorls
+# colorful ls usig Ruby | gem install colorls
 source $(dirname $(gem which colorls))/tab_complete.sh

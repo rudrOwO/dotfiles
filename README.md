@@ -1,5 +1,6 @@
 ### Immediate dependencies for a new system:
 zsh <br>
+nvim <br>
 oh-my-zsh <br>
 powerlevel10k <br>
 nvm & npm <br>
@@ -9,4 +10,4 @@ rofi <br>
 devilspie <br>
 gem package manager <br>
 colorls from gem <br>
-jetbrains Mono Nerd Font
+jetbrains Mono Nerd Font <br>

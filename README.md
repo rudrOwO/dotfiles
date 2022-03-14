@@ -9,3 +9,4 @@ rofi <br>
 devilspie <br>
 gem package manager <br>
 colorls from gem <br>
+jetbrains Mono Nerd Font

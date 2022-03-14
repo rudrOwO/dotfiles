@@ -5,6 +5,10 @@
 set $super Mod4
 set $alt Mod1
 
+# set monitors
+set $pm HDMI-0
+set $sm DP-5
+
 ################################
 ### Commonly Used Variables: ###
 ################################
@@ -16,20 +20,29 @@ set $alt Mod1
 ### Wallpaper: ###
 # - You need to specify homescreen wallpaper using azote
 
-set $lockScreenWallpaper /usr/share/wallpapers/garuda-wallpapers/'Black Eagle.png'
-
+set $lockScreenWallpaper /home/rudro/Pictures/arch.png
 ### Applications: ###
 
 set $preferredTerminalEmulator /usr/bin/alacritty
-set $preferredBrowser /usr/bin/firefox-developer-edition
+set $preferredBrowser /usr/bin/firefox
 set $preferredFileManager /usr/bin/thunar
 set $preferredCodeEditor /usr/bin/code
 set $preferredCalculator /usr/bin/galculator
 set $preferredScreenCaptureTool /usr/bin/flameshot gui
 
+### workspace 1 & 2 always on primary monitor ###
+workspace 1 output $sm
+workspace 2 output $sm
+workspace 3 output $pm
+workspace 4 output $pm
+workspace 5 output $pm
+workspace 6 output $pm
+workspace 7 output $pm
+workspace 8 output $pm
+
 ### Workspace Names ###
-set $ws1 1
-set $ws2 2
+set $ws1  1
+set $ws2  2
 set $ws3 3
 set $ws4 4
 set $ws5 5
@@ -53,6 +66,7 @@ bindsym Print exec --no-startup-id $preferredScreenCaptureTool
 # - alacritty & xfce4-terminal can also be started using their individual keybindings
 
 bindsym $super+Return exec $preferredTerminalEmulator
+bindsym $super+Shift+Return exec $preferredTerminalEmulator -t 'Alacritty-float'
 bindsym $super+t exec xfce4-terminal
 
 # set font
@@ -63,6 +77,7 @@ floating_modifier $super
 
 #exec --no-startup-id ~/.fehbg
 #exec --no-startup-id xsettingsd &
+exec_always --no-startup-id autotiling
 exec --no-startup-id pasystray
 #exec --no-startup-id conky
 #exec --no-startup-id conky -c ~/.config/conky/conky-shcts
@@ -82,7 +97,7 @@ exec blueberry-tray
 exec --no-startup-id java -Xmx1024m -jar "/opt/xdman/xdman.jar" -m
 exec --no-startup-id picom -b --experimental-backends
 exec --no-startup-id nitrogen --restore
-exec --no-startup-id devilspie -a
+exec --no-startup-id devilspie
 
 # hide/unhide i3status bar
 # bindsym $super+m bar mode toggle
@@ -98,6 +113,9 @@ bindsym $super+o exec rofi -show drun
 
 # Lock screen
 bindsym $super+Escape exec i3lock -ti $lockScreenWallpaper
+
+# Back and forth
+bindsym $super+Tab workspace back_and_forth
 
 # Screen brightness controls
 # bindsym XF86MonBrightnessUp exec "xbacklight -inc 10; notify-send 'brightness up'"
@@ -250,12 +268,13 @@ mode "resize" {
         bindsym Up resize shrink height 5 px or 5 ppt
         bindsym Right resize grow width 5 px or 5 ppt
 
-        bindsym $super+h resize shrink width 5 px or 5 ppt
-        bindsym $super+j resize grow height 5 px or 5 ppt
-        bindsym $super+k resize shrink height 5 px or 5 ppt
-        bindsym $super+l resize grow width 5 px or 5 ppt
+        bindsym h resize shrink width 5 px or 5 ppt
+        bindsym j resize grow height 5 px or 5 ppt
+        bindsym k resize shrink height 5 px or 5 ppt
+        bindsym l resize grow width 5 px or 5 ppt
 
         bindsym Return mode "default"
+        bindsym Escape mode "default"
 }
 bindsym $super+r mode "resize"
 
@@ -292,6 +311,7 @@ for_window [class="zoom"] floating enable
 for_window [class="Qtconfig-qt4"] floating enable border normal
 for_window [class="qt5ct"] floating enable sticky enable border normal
 #for_window [title="sudo"] floating enable border normal
+for_window [title="Alacritty-float"] floating enable
 for_window [class="Simple-scan"] floating enable border normal
 for_window [class="(?i)System-config-printer.py"] floating enable border normal
 for_window [class="Skype"] floating enable border normal
@@ -301,6 +321,7 @@ for_window [class="Xfburn"] floating enable
 for_window [class="qpdfview"] floating enable
 for_window [class="keepassxc"] floating enable
 for_window [class="garuda-welcome"] floating enable
+for_window [class="Spotify"] resize set 1500 900
 
 # window rules, you can find the window class using xprop
 assign [class=URxvt] 1
@@ -335,7 +356,7 @@ gaps outer 0
 # gaps outer all plus 5
 
 # Smart gaps (gaps used if only more than one container on the workspace)
-smart_gaps on
+# smart_gaps on
 
 # Smart borders (draw borders around container only if it is not the only container on this workspace)
 # on|no_gaps (on=always activate and no_gaps=only activate if the gap size to the edge of the screen is 0)

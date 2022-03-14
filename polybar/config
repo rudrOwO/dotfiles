@@ -25,8 +25,8 @@ screenchange-reload = true
 
 [colors]
 #background = ${xrdb:color0:#222}
-background = ${xrdb:background:#aa000000}
-background-alt = ${xrdb:color8:#000}
+background = ${xrdb:background:#e5121212}
+background-alt = ${xrdb:color8:#e5121212}
 ;foreground = ${xrdb:color7:#222}
 foreground = ${xrdb:foreground:#dfdfdf}
 foreground-alt = ${xrdb:color7:#444}
@@ -41,7 +41,7 @@ margin-bottom = 0
 [bar/top]
 monitor = ${env:MONITOR:}
 width = 100%
-height = 27
+height = 25
 offset-x = 0%
 offset-y = 0
 radius = 0
@@ -71,7 +71,7 @@ font-4 = Source Code Pro:size=14;0
 
 modules-left = bspwm i3 cpu spotify
 modules-center = polywins
-modules-right =  filesystem  pulseaudio date time
+modules-right =  filesystem memory pulseaudio time
 ; wm-restack = bspwm
 wm-restack = i3
 
@@ -196,7 +196,7 @@ index-sort = true
 wrapping-scroll = true
 
 ; Only show workspaces on the same output as the bar
-;pin-workspaces = true
+pin-workspaces = true
 
 ; Workspace icons
 ws-icon-0 = "1;"
@@ -331,7 +331,7 @@ format-prefix =
 format = <label> <ramp-coreload>
 format-prefix-foreground = ${colors.foreground-alt}
 ; format-underline = ${colors.primary}
-label = CPU: %percentage%%
+label = CPU %percentage%%
 label-font = 5
 
 ramp-coreload-spacing = 1
@@ -355,9 +355,9 @@ format-prefix-foreground = ${colors.foreground-alt}
 ; format-underline = ${xrdb:color13:#4bffdc}
 ; label = %percentage_used:2%%
 
-label = MEM
+label = RAM
 label-font = 1
-label-foreground = #99
+label-foreground = #e5e5e5
 
 bar-used-width = 10
 bar-used-gradient = true
@@ -365,13 +365,13 @@ bar-used-foreground-0 = #449f3d
 bar-used-foreground-1 = #2f8419
 bar-used-foreground-2 = #f5a70a
 bar-used-foreground-3 = #ed5456
-bar-used-indicator = █
-bar-used-indicator-font = 3
+bar-used-indicator = |
+bar-used-indicator-font = 5
 bar-used-indicator-foreground = #fff
-bar-used-fill = █
-bar-used-fill-font = 3
-bar-used-empty = █
-bar-used-empty-font = 3
+bar-used-fill = -
+bar-used-fill-font = 5
+bar-used-empty = -
+bar-used-empty-font = 5
 bar-used-empty-foreground = #44
 
 [module/wlan]

@@ -1,25 +1,26 @@
 {
     "workbench.list.automaticKeyboardNavigation": false,
+    "workbench.colorTheme": "One Dark Pro Darker",
     "editor.fontFamily": "'JetBrains Mono', 'Fira Code Retina', 'MesloLGS NF', monospace",
-    "editor.fontWeight": "500",
+    "editor.fontWeight": "400",
     "terminal.integrated.fontFamily": "'JetBrains Mono', 'MesloLGS NF'",
     "editor.fontLigatures": true,
     "editor.fontSize": 15,
     "workbench.sideBar.location": "right",
     "workbench.colorCustomizations": {
-        "editor.background": "#101010",
-        "activityBar.background": "#101010",
-        "sideBar.background": "#101010",
-        "editorGroupHeader.tabsBackground": "#101010",
-        "statusBar.background": "#101010",
-        "statusBar.noFolderBackground": "#101010",
+        "editor.background": "#121212",
+        "activityBar.background": "#121212",
+        "sideBar.background": "#121212",
+        "editorGroupHeader.tabsBackground": "#121212",
+        "statusBar.background": "#121212",
+        "statusBar.noFolderBackground": "#121212",
         "statusBar.foreground": "#E5E5E5",
         // "statusBar.border": "#CD3132",
         "editorCursor.foreground": "#CD3132",
         "editorCursor.background": "#E5E5E5",
         "terminalCursor.foreground": "#CD3132",
         "terminalCursor.background": "#E5E5E5",
-        // "sideBar.border": "#5C5C5C",
+        // "sideBar.border": "#CD3132",
         "terminal.ansiBlack": "#000000",
         "terminal.ansiBlue": "#2472C8",
         "terminal.ansiBrightCyan": "#29B8DB",
@@ -36,13 +37,16 @@
         "terminal.ansiRed": "#CD3132",
         "terminal.ansiWhite": "#E5E5E5",
         "terminal.ansiYellow": "#E5E510",
-        "terminal.background": "#101010",
+        "panel.background": "#121212",
+        "panel.foreground": "#E5E5E5",
+        "panelTitle.activeBorder": "#CD3132",
+        "terminal.background": "#121212",
         "terminal.foreground": "#E5E5E5",
-        //"scrollbarSlider.background": "#121212",
-        //"scrollbarSlider.hoverBackground": "#121212",
         "focusBorder": "#CD3132",
         "activityBar.activeBorder": "#CD3132",
         "tab.activeBorder": "#CD3132",
+        "activityBarBadge.background": "#CD3132",
+        "activityBarBadge.foreground": "#E5E5E5",
     },
     "files.autoSave": "onFocusChange",
     "vscode-neovim.neovimExecutablePaths.linux": "/usr/bin/nvim",
@@ -468,10 +472,16 @@
             ]
         },
         {
-            "key": "h",
-            "name": "Split Horizontal",
+            "key": "v",
+            "name": "Split editor below",
             "type": "command",
-            "command": "workbench.action.splitEditorDown"
+            "command": "workbench.action.moveEditorToBelowGroup"
+        },
+        {
+            "key": "V",
+            "name": "Split editor above",
+            "type": "command",
+            "command": "workbench.action.moveEditorToAboveGroup"
         },
         {
             "key": "i",
@@ -919,10 +929,16 @@
             ]
         },
         {
-            "key": "v",
-            "name": "Split Vertical",
+            "key": "h",
+            "name": "Split editor to right",
             "type": "command",
-            "command": "workbench.action.splitEditor"
+            "command": "workbench.action.moveEditorToRightGroup"
+        },
+        {
+            "key": "H",
+            "name": "Split editor to left",
+            "type": "command",
+            "command": "workbench.action.moveEditorToLeftGroup"
         },
         {
             "key": "w",
@@ -1042,14 +1058,13 @@
     "gitlens.currentLine.enabled": false,
     "emmet.showSuggestionsAsSnippets": true,
     "emmet.triggerExpansionOnTab": true,
-    "codesnap.backgroundColor": "#101010",
+    "codesnap.backgroundColor": "#121212",
     "[html]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "[javascript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "prettier.tabWidth": 4,
     "workbench.startupEditor": "none",
     "spotify.showSignOutButton": false,
     "spotify.statusCheckInterval": 1000,
@@ -1063,7 +1078,13 @@
     "window.menuBarVisibility": "toggle",
     "editor.cursorBlinking": "solid",
     "glassit.alpha": 220,
-    "editor.formatOnSave": true,
     "terminal.integrated.allowChords": false,
-    "workbench.colorTheme": "One Dark Pro"
+    "prettier.tabWidth": 4,
+    "files.exclude": {
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
+    },
+    "liveServer.settings.donotVerifyTags": true
 }

@@ -83,7 +83,6 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 plugins=(
     git
     zsh-autosuggestions
-    zsh-syntax-highlighting
     sudo
     copypath
 )
@@ -115,7 +114,7 @@ export EDITOR='/usr/bin/nvim'
 # Example aliases
 alias zshconfig="nvim ~/.zshrc"
 alias grep="grep -i"
-alias ls="colorls"
+# alias ls="colorls"
 
 # Use Tab and '\' for autocompletions
 bindkey '\' expand-or-complete
@@ -126,19 +125,16 @@ bindkey '^j' down-line-or-search
 bindkey '^w' forward-word
 bindkey '^b' backward-word
 bindkey '^[[Z' backward-kill-word
-bindkey '^h' vi-backward-char
-bindkey '^l' vi-forward-char
+# Deprecated
+# bindkey '^h' vi-backward-char
+# bindkey '^l' vi-forward-char
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+# zsh syntax highlighting
+source $ZSH/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
 if [ $PWD = $HOME ]; then
     cd ~/Dev
 fi
-
-# colorful ls usig Ruby | gem install colorls
-source $(dirname $(gem which colorls))/tab_complete.sh
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

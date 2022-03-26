@@ -5,12 +5,16 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# Path to Android SDK
-export ANDROID_SDK=$HOME/Android/Sdk
+export ANDROID_SDK_ROOT=$HOME/Android/Sdk  
+export ANDROID_HOME=$HOME/Android/Sdk
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-export PATH=$HOME/.local/bin:$HOME/.local/share/gem/ruby/3.0.0/bin:$ANDROID_SDK:$ANDROID_SDK/platform-tools:$ANDROID_SDK/emulator:$PATH
+export PATH=$HOME/.local/bin:$HOME/.local/share/gem/ruby/3.0.0/bin:$PATH
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/rudro/.oh-my-zsh"
@@ -132,9 +136,9 @@ bindkey '^[[Z' backward-kill-word
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-# zsh syntax highlighting
-source $ZSH/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
 if [ $PWD = $HOME ]; then
     cd ~/Dev
 fi
+
+# zsh syntax highlighting
+source $ZSH/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

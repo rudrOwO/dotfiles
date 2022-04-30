@@ -1,5 +1,5 @@
 nnoremap Y y$
-"set clipboard+=unnamedplus
+set clipboard+=unnamedplus
 set nrformats+=alpha
 
 if exists('g:vscode')
@@ -14,7 +14,7 @@ else
 
     filetype plugin indent on
 
-    set t_Co=256
+    "set t_Co=256
     set noshowmode
     set background=dark    
     set termguicolors
@@ -31,20 +31,19 @@ else
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
     "Theme Customizations
-    Plug 'ajmwagar/vim-deus'
+    Plug 'joshdick/onedark.vim'
     Plug 'ayu-theme/ayu-vim'
     Plug 'morhetz/gruvbox'
-    Plug 'kaicataldo/material.vim', { 'branch': 'main' }
     call plug#end ()
 
-    let g:airline_theme='deus'
-    let ayucolor="mirage"
+    let g:airline_theme='minimalist'
+    let ayucolor='mirage'
     let g:material_theme_style='darker'
     let g:gruvbox_contrast_light='hard'
     let g:gruvbox_contrast_dark='hard'
     let g:airline_powerline_fonts=1
 
-    colorscheme gruvbox
+    colorscheme onedark
 
     "Auto-save on focus change
     "au FocusLost * :wa

@@ -7,4 +7,5 @@ nvm & npm <br>
 autotiling for i3 <br>
 polybar <br>
 rofi <br>
+alacritty
 jetbrains Mono Nerd Font <br>

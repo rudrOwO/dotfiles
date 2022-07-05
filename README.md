@@ -4,8 +4,9 @@ nvim <br>
 oh-my-zsh <br>
 powerlevel10k <br>
 n & npm <br>
+i3 <br>
 autotiling for i3 <br>
 polybar <br>
 rofi <br>
-alacritty
+alacritty <br>
 jetbrains Mono Nerd Font <br>

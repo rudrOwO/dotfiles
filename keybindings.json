@@ -246,5 +246,13 @@
     "key": "ctrl+shift+5",
     "command": "-workbench.action.terminal.split",
     "when": "terminalFocus && terminalProcessSupported || terminalFocus && terminalWebExtensionContributedProfile"
+  },
+  {
+    "key": "ctrl+shift+o",
+    "command": "editor.emmet.action.balanceOut"
+  },
+  {
+    "key": "ctrl+shift+i",
+    "command": "editor.emmet.action.balanceIn"
   }
 ]

@@ -3,16 +3,15 @@
   "editor.fontFamily": "'JetBrains Mono', 'Fira Code Retina', 'MesloLGS NF', monospace",
   "terminal.integrated.fontFamily": "'JetBrains Mono', 'MesloLGS NF'",
   "editor.fontLigatures": true,
-  "editor.fontSize": 16,
   "editor.fontWeight": "500",
   "workbench.sideBar.location": "right",
   "workbench.colorCustomizations": {
-    "editor.background": "#121212",
-    "activityBar.background": "#121212",
+    "editor.background": "#101010",
+    "activityBar.background": "#101010",
     "sideBar.background": "#161616",
-    "editorGroupHeader.tabsBackground": "#121212",
-    "statusBar.background": "#121212",
-    "statusBar.noFolderBackground": "#121212",
+    "editorGroupHeader.tabsBackground": "#101010",
+    "statusBar.background": "#000000",
+    "statusBar.noFolderBackground": "#000000",
     "statusBar.foreground": "#E5E5E5",
     // "statusBar.border": "#CD3132",
     "editorCursor.foreground": "#CD3132",
@@ -20,7 +19,7 @@
     "terminalCursor.foreground": "#CD3132",
     "terminalCursor.background": "#E5E5E5",
     // "sideBar.border": "#CD3132",
-    "terminal.ansiBlack": "#121212",
+    "terminal.ansiBlack": "#101010",
     "terminal.ansiBlue": "#2472C8",
     "terminal.ansiBrightCyan": "#29B8DB",
     "terminal.ansiBrightBlack": "#555753",
@@ -36,10 +35,10 @@
     "terminal.ansiRed": "#CD3132",
     "terminal.ansiWhite": "#E5E5E5",
     "terminal.ansiYellow": "#E5E510",
-    "panel.background": "#121212",
+    "panel.background": "#101010",
     "panel.foreground": "#E5E5E5",
     "panelTitle.activeBorder": "#CD3132",
-    "terminal.background": "#121212",
+    "terminal.background": "#101010",
     "terminal.foreground": "#E5E5E5",
     "focusBorder": "#CD3132",
     "activityBar.activeBorder": "#CD3132",
@@ -172,11 +171,7 @@
           "key": "y",
           "name": "Copy buffer to clipboard",
           "type": "commands",
-          "commands": [
-            "editor.action.selectAll",
-            "editor.action.clipboardCopyAction",
-            "cancelSelection"
-          ]
+          "commands": ["editor.action.selectAll", "editor.action.clipboardCopyAction", "cancelSelection"]
         }
       ]
     },
@@ -1090,7 +1085,11 @@
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "editor.lineNumbers": "relative",
+  "workbench.colorTheme": "One Dark Pro Darker",
   "editor.cursorSmoothCaretAnimation": true,
-  "workbench.colorTheme": "One Dark Pro Darker"
+  "prettier.printWidth": 90,
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.fontSize": 16
 }

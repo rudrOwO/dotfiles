@@ -41,8 +41,8 @@ workspace 7 output $pm
 workspace 8 output $pm
 
 ### Workspace Names ###
-set $ws1  1
-set $ws2  2
+set $ws1 1
+set $ws2 2
 set $ws3 3
 set $ws4 4
 set $ws5 5
@@ -67,7 +67,7 @@ bindsym Print exec --no-startup-id $preferredScreenCaptureTool
 
 bindsym $super+Return exec $preferredTerminalEmulator
 bindsym $super+Shift+Return exec $preferredTerminalEmulator -t 'Alacritty-float'
-bindsym $super+t exec xfce4-terminal
+# bindsym $super+t exec xfce4-terminal
 
 # set font
 font pango: source code pro 10
@@ -85,7 +85,7 @@ exec --no-startup-id copyq
 exec --no-startup-id dunst
 #exec --no-startup-id dex -a -s /etc/xdg/autostart/:~/.config/autostart/
 #exec --no-startup-id redshift
-exec --no-startup-id desktop-items
+#exec --no-startup-id desktop-items
 exec --no-startup-id nm-applet
 exec --no-startup-id pamac-tray
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
@@ -93,11 +93,10 @@ exec --no-startup-id xfce4-power-manager
 exec_always --no-startup-id setcursor
 exec_always --no-startup-id ${HOME}/.config/polybar/launch.sh
 exec_always --no-startup-id numlockx on
-exec blueberry-tray
+#exec blueberry-tray
 exec --no-startup-id java -Xmx1024m -jar "/opt/xdman/xdman.jar" -m
 exec --no-startup-id picom -b --experimental-backends
 exec --no-startup-id nitrogen --restore
-exec --no-startup-id devilspie
 
 # hide/unhide i3status bar
 # bindsym $super+m bar mode toggle
@@ -347,8 +346,9 @@ client.background           #2f343f
 for_window [class=".*"] border pixel 1
 
 # Set inner/outer gaps
-gaps inner 12
-gaps outer 0
+gaps inner 8
+gaps outer 2
+gaps top 32
 
 # Additionally, you can issue commands with the following syntax. This is useful to bind keys to changing the gap size.
 # gaps inner|outer current|all set|plus|minus <px>

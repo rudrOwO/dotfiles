@@ -25,8 +25,8 @@ screenchange-reload = true
 
 [colors]
 #background = ${xrdb:color0:#222}
-background = ${xrdb:background:#e5121212}
-background-alt = ${xrdb:color8:#e5121212}
+background = ${xrdb:background:#000000}
+background-alt = ${xrdb:color8:#000000}
 ;foreground = ${xrdb:color7:#222}
 foreground = ${xrdb:foreground:#dfdfdf}
 foreground-alt = ${xrdb:color7:#444}
@@ -40,10 +40,10 @@ margin-bottom = 0
 
 [bar/top]
 monitor = ${env:MONITOR:}
-width = 100%
+width = 99%
 height = 25
-offset-x = 0%
-offset-y = 0
+offset-x = 0.5%
+offset-y = 0.5%
 radius = 0
 fixed-center = true
 bottom = false
@@ -66,16 +66,16 @@ module-margin-right = 1
 font-0 = KoHo SemiBold:style=Regular:size=12;0
 font-1 = Unifont:size=10:style=Medium;0
 font-2 = FontAwesome:style=Regular:size=14
-font-3 = Weather Icons:size=14;1
+font-3 = JetBrains Mono:size=12;1
 font-4 = Source Code Pro:size=14;0
 
-modules-left = bspwm i3 cpu spotify
-modules-center = polywins
+modules-left = bspwm i3 cpu polywins spotify
+modules-center = date
 modules-right =  filesystem memory pulseaudio time
 ; wm-restack = bspwm
-wm-restack = i3
+; wm-restack = i3
 
-; override-redirect = true
+override-redirect = true
 
 ;scroll-up = bspwm-desknext
 ;scroll-down = bspwm-deskprev
@@ -193,37 +193,37 @@ label-empty-padding = 2
 type = internal/i3
 format = <label-state> <label-mode>
 index-sort = true
-wrapping-scroll = true
+wrapping-scroll = false
 
 ; Only show workspaces on the same output as the bar
 pin-workspaces = true
 
 ; Workspace icons
-ws-icon-0 = "1;"
+ws-icon-0 = "1;"
 ws-icon-1 = "2;"
-ws-icon-2 = "3;"
-ws-icon-3 = "9;"
+ws-icon-2 = "3;"
+;ws-icon-3 = "9;"
 
-ws-icon-default = 
+ws-icon-default = 
 
 label-mode-padding = 2
 label-mode-foreground = ${colors.background}
 label-mode-background = ${colors.primary}
 
 ; focused = Active workspace on focused monitor
-label-focused = %{T1}%name%
+label-focused = %{T3}%icon% %{T1}%name%
 label-focused-background = ${module/bspwm.label-focused-background}
 label-focused-underline = ${module/bspwm.label-focused-underline}
 label-focused-padding = ${module/bspwm.label-focused-padding}
 label-focused-font = 3
 
 ; unfocused = Inactive workspace on any monitor
-label-unfocused = %{T1}%name%
+label-unfocused = %{T3}%icon% %{T1}%name%
 label-unfocused-padding = ${module/bspwm.label-occupied-padding}
 label-unfocused-font = 3
 
 ; visible = Active workspace on unfocused monitor
-label-visible = %{T1}%name%
+label-visible = %{T3}%icon% %{T1}%name%
 label-visible-background = ${self.label-focused-background}
 label-visible-underline = ${module/bspwm.label-visible-underline}
 label-visible-padding = ${self.label-focused-padding}

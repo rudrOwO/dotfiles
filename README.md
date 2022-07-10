@@ -1,5 +1,6 @@
 ### Immediate dependencies for a new system:
 
+- [Archinstall](https://github.com/archlinux/archinstall)
 - zsh <br>
 - nvim <br>
 - xclip <br>
@@ -7,8 +8,8 @@
 - [powerlevel10k](https://github.com/romkatv/powerlevel10k#installation) <br>
 - n & npm <br>
 - i3-gaps <br>
+- alacritty <br>
 - [picom](https://github.com/jonaburg/picom) <br>
 - polybar <br>
 - rofi <br>
-- alacritty <br>
 - [jetbrains Mono Nerd Font](https://www.jetbrains.com/lp/mono/) <br>

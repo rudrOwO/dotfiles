@@ -2,13 +2,13 @@
 
 - zsh <br>
 - nvim <br>
-- oh-my-zsh <br>
-- powerlevel10k <br>
+- xclip <br>
+- [oh-my-zsh](https://ohmyz.sh/) <br>
+- [powerlevel10k](https://github.com/romkatv/powerlevel10k#installation) <br>
 - n & npm <br>
 - i3-gaps <br>
 - [picom](https://github.com/jonaburg/picom) <br>
-- autotiling for i3 <br>
 - polybar <br>
 - rofi <br>
 - alacritty <br>
-- jetbrains Mono Nerd Font <br>
+- [jetbrains Mono Nerd Font](https://www.jetbrains.com/lp/mono/) <br>

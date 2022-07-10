@@ -77,10 +77,8 @@ floating_modifier $super
 
 #exec --no-startup-id ~/.fehbg
 #exec --no-startup-id xsettingsd &
-exec_always --no-startup-id autotiling
+#exec_always --no-startup-id autotiling
 exec --no-startup-id pasystray
-#exec --no-startup-id conky
-#exec --no-startup-id conky -c ~/.config/conky/conky-shcts
 exec --no-startup-id copyq
 exec --no-startup-id dunst
 #exec --no-startup-id dex -a -s /etc/xdg/autostart/:~/.config/autostart/
@@ -343,12 +341,12 @@ client.background           #2f343f
 #############################
 
 # Setting border
-for_window [class=".*"] border pixel 1
+for_window [class=".*"] border pixel 0
 
 # Set inner/outer gaps
 gaps inner 8
 gaps outer 2
-gaps top 32
+gaps top 35
 
 # Additionally, you can issue commands with the following syntax. This is useful to bind keys to changing the gap size.
 # gaps inner|outer current|all set|plus|minus <px>

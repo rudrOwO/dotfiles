@@ -77,22 +77,17 @@ floating_modifier $super
 
 #exec --no-startup-id ~/.fehbg
 #exec --no-startup-id xsettingsd &
-#exec_always --no-startup-id autotiling
 exec --no-startup-id pasystray
 exec --no-startup-id copyq
 exec --no-startup-id dunst
 #exec --no-startup-id dex -a -s /etc/xdg/autostart/:~/.config/autostart/
-#exec --no-startup-id redshift
-#exec --no-startup-id desktop-items
 exec --no-startup-id nm-applet
 exec --no-startup-id pamac-tray
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id xfce4-power-manager
-exec_always --no-startup-id setcursor
 exec_always --no-startup-id ${HOME}/.config/polybar/launch.sh
 exec_always --no-startup-id numlockx on
 #exec blueberry-tray
-exec --no-startup-id java -Xmx1024m -jar "/opt/xdman/xdman.jar" -m
 exec --no-startup-id picom -b --experimental-backends
 exec --no-startup-id nitrogen --restore
 

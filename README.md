@@ -1,6 +1,5 @@
 ### Immediate dependencies for a new system:
 
-- [Archinstall](https://github.com/archlinux/archinstall)
 - zsh <br>
 - nvim <br>
 - xclip <br>

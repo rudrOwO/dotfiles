@@ -77,7 +77,7 @@ window:
   # Override the variant of the GTK theme. Commonly supported values are `dark` and `light`.
   # Set this to `None` to use the default theme variant.
   gtk_theme_variant: dark
-  opacity: 0.90
+  opacity: 0.85
 
 scrolling:
   # Maximum number of lines in the scrollback buffer.
@@ -181,7 +181,7 @@ colors:
   # unset, the cursor color will be the inverse of the cell color.
   cursor:
     text: '#e5e5e5'
-    cursor: '#cd3132'
+    cursor: '#007add'
 
   # Vi mode cursor colors
   #
@@ -206,7 +206,7 @@ colors:
     red:     '#cd3132'
     green:   '#0dbc79'
     yellow:  '#e5e510'
-    blue:    '#3b8eea'
+    blue:    '#007add'
     magenta: '#bc3fbc'
     cyan:    '#11a8cd'
     white:   '#e5e5e5'
@@ -217,7 +217,7 @@ colors:
     red:     '#f14c4c'
     green:   '#23d18b'
     yellow:  '#f5f543'
-    blue:    '#3b8eea'
+    blue:    '#007add'
     magenta: '#d670d6'
     cyan:    '#29b8db'
     white:   '#e5e5e5'

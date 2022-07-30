@@ -1,9 +1,5 @@
 [
   {
-    "command": "workbench.view.scm",
-    "key": "Shift Shift"
-  },
-  {
     "command": "vscode-neovim.compositeEscape1",
     "key": "i",
     "when": "neovim.mode == insert && editorTextFocus",

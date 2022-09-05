@@ -7,14 +7,10 @@ fi
 
 export ANDROID_SDK_ROOT=$HOME/Android/Sdk  
 export ANDROID_HOME=$HOME/Android/Sdk
+export RANGER_LOAD_DEFAULT_RC=false
 
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
-export PATH=$HOME/.local/bin:$HOME/.local/share/gem/ruby/3.0.0/bin:$PATH
-export PATH=$PATH:$ANDROID_HOME/emulator
-export PATH=$PATH:$ANDROID_HOME/tools
-export PATH=$PATH:$ANDROID_HOME/tools/bin
-export PATH=$PATH:$ANDROID_HOME/platform-tools
+export PATH=/usr/local/bin:/home/rudro/.local/bin:/home/rudro/go/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/rudro/.oh-my-zsh"
@@ -89,6 +85,7 @@ plugins=(
     zsh-autosuggestions
     sudo
     copypath
+    copyfile
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -111,14 +108,19 @@ autoload n-cd
 #   export EDITOR='mvim'
 # fi
 export EDITOR='/usr/bin/nvim'
+export VISUAL='/usr/bin/nvim'
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
-# Example aliases
+# My aliases
 alias zshconfig="nvim ~/.zshrc"
 alias grep="grep -i"
-# alias ls="colorls"
+alias gtop="watch -n0.3 nvidia-smi" # for nvidia GPU stats
+alias r="ranger"
+alias cal="cal --sunday"
+alias docker="sudo docker"
+alias docker-compose="sudo docker-compose"
 
 # Use Tab and '\' for autocompletions
 bindkey '\' expand-or-complete
@@ -136,9 +138,21 @@ bindkey '^[[Z' backward-kill-word
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+# Start shell in ~/Dev directory
 if [ $PWD = $HOME ]; then
     cd ~/Dev
 fi
+
+# Auto List content on directory change
+function list_all() {
+  emulate -L zsh
+  ls
+}
+
+if [[ ${chpwd_functions[(r)list_all]} != "list_all" ]];then
+  chpwd_functions=(${chpwd_functions[@]} "list_all")
+fi
+
 
 # zsh syntax highlighting
 source $ZSH/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

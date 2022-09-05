@@ -34,16 +34,16 @@ else
     Plug 'joshdick/onedark.vim'
     Plug 'ayu-theme/ayu-vim'
     Plug 'morhetz/gruvbox'
+    Plug 'olivercederborg/poimandres.nvim'
     call plug#end ()
 
     let g:airline_theme='minimalist'
-    let ayucolor='mirage'
     let g:material_theme_style='darker'
     let g:gruvbox_contrast_light='hard'
     let g:gruvbox_contrast_dark='hard'
     let g:airline_powerline_fonts=1
 
-    colorscheme onedark
+    colorscheme poimandres
 
     "Auto-save on focus change
     "au FocusLost * :wa

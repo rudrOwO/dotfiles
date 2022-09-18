@@ -12,3 +12,4 @@
 - polybar <br>
 - rofi <br>
 - [jetbrains Mono Nerd Font](https://www.jetbrains.com/lp/mono/) <br>
+- [Task Warrior](https://github.com/GothenburgBitFactory/taskwarrior)

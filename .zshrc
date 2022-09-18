@@ -115,12 +115,14 @@ export VISUAL='/usr/bin/nvim'
 
 # My aliases
 alias zshconfig="nvim ~/.zshrc"
+alias rm="rm -rf"
 alias grep="grep -i"
 alias gtop="watch -n0.3 nvidia-smi" # for nvidia GPU stats
 alias r="ranger"
 alias cal="cal --sunday"
 alias docker="sudo docker"
 alias docker-compose="sudo docker-compose"
+alias t="task" # Alias for taskWarrior
 
 # Use Tab and '\' for autocompletions
 bindkey '\' expand-or-complete

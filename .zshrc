@@ -119,6 +119,7 @@ alias rm="rm -rf"
 alias grep="grep -i"
 alias gtop="watch -n0.3 nvidia-smi" # for nvidia GPU stats
 alias r="ranger"
+alias vim="nvim"
 alias cal="cal --sunday"
 alias docker="sudo docker"
 alias docker-compose="sudo docker-compose"
@@ -154,7 +155,6 @@ function list_all() {
 if [[ ${chpwd_functions[(r)list_all]} != "list_all" ]];then
   chpwd_functions=(${chpwd_functions[@]} "list_all")
 fi
-
 
 # zsh syntax highlighting
 source $ZSH/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

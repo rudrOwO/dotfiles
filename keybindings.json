@@ -1,9 +1,9 @@
 [
   {
     "command": "vscode-neovim.compositeEscape1",
-    "key": "i",
+    "key": "j",
     "when": "neovim.mode == insert && editorTextFocus",
-    "args": "i"
+    "args": "j"
   },
   {
     "key": "ctrl+l",

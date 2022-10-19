@@ -7,11 +7,11 @@
   "workbench.sideBar.location": "right",
   "workbench.colorCustomizations": {
     "quickInput.background": "#121212",
-    "editor.background": "#141414",
-    "editorGutter.background": "#141414",
+    "editor.background": "#161616",
+    "editorGutter.background": "#161616",
     "activityBar.background": "#121212",
     "sideBar.background": "#121212",
-    "editorGroupHeader.tabsBackground": "#141414",
+    "editorGroupHeader.tabsBackground": "#161616",
     "statusBar.background": "#121212",
     "statusBar.noFolderBackground": "#121212",
     "statusBar.foreground": "#EEEEEE",
@@ -43,9 +43,9 @@
     "terminal.foreground": "#E5E5E5",
     // "focusBorder": "#CD3132",
     // "activityBar.activeBorder": "#CD3132",
-    "tab.inactiveBackground": "#141414",
-    "tab.activeBackground": "#141414",
-    "tab.unfocusedActiveBackground": "#141414",
+    "tab.inactiveBackground": "#161616",
+    "tab.activeBackground": "#161616",
+    "tab.unfocusedActiveBackground": "#161616",
     // "tab.activeBorderTop": "#00000000",
     "tab.activeBorder": "#CD3132",
     // "activityBarBadge.background": "#CD3132",
@@ -1101,13 +1101,6 @@
   "prettier.semi": false,
   "workbench.colorTheme": "One Dark Pro",
   "todo-tree.highlights.useColourScheme": true,
-  "todo-tree.general.tags": [
-    "BUG",
-    "HACK",
-    "FIXME",
-    "TODO",
-    "NOTE",
-    "[ ]",
-    "[x]"
-  ]
+  "todo-tree.general.tags": ["BUG", "HACK", "FIXME", "TODO", "NOTE", "[ ]", "[x]"],
+  "workbench.activityBar.visible": false
 }

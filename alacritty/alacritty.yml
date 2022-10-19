@@ -76,7 +76,7 @@ window:
   #
   # Override the variant of the GTK theme. Commonly supported values are `dark` and `light`.
   # Set this to `None` to use the default theme variant.
-  gtk_theme_variant: dark
+  window.decorations_theme_variant: dark
   opacity: 0.9
 
 scrolling:
@@ -164,7 +164,7 @@ draw_bold_text_with_bright_colors: true
 colors:
   # Default colors
   primary:
-    background: '#141414'
+    background: '#121212'
     foreground: '#e5e5e5'
 
     # Bright and dim foreground colors
@@ -181,7 +181,7 @@ colors:
   # unset, the cursor color will be the inverse of the cell color.
   cursor:
     text: '#e5e5e5'
-    cursor: '#007add'
+    cursor: '#cd3132'
 
   # Vi mode cursor colors
   #

@@ -1,0 +1,17 @@
+# INSTALL OH MY POSH FIRST
+oh-my-posh init pwsh --config 'C:/Users/Emdadul/.config/oh-my-posh/powerlevel10k_rainbow.omp.json' | Invoke-Expression
+
+# Alias
+Set-Alias -Name vim -Value nvim
+
+# Shows navigable menu of all options when hitting Tab
+# Set-PSReadlineKeyHandler -Key \ -Function MenuComplete
+
+# vim-like key hacks (similar to my .zshrc)
+Set-PSReadlineKeyHandler -Key Ctrl+k -Function HistorySearchBackward
+Set-PSReadlineKeyHandler -Key Ctrl+j -Function HistorySearchForward
+Set-PSReadlineKeyHandler -Key Ctrl+u -Function DeleteLine
+Set-PSReadlineKeyHandler -Key Ctrl+w -Function ForwardWord
+Set-PSReadlineKeyHandler -Key Ctrl+b -Function BackwardWord
+Set-PSReadlineKeyHandler -Key Shift+Tab -Function BackwardDeleteWord
+Set-PSReadLineOption -HistorySearchCursorMovesToEnd 

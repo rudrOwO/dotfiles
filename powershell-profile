@@ -1,15 +1,13 @@
-# DEPENDENCIES FOR THIS CONFIG TO WORK
+# DEPENDENCIES FOR THIS SCRIPT
 # - Oh My Posh < https://ohmyposh.dev/docs >
-# - PsReadline < https://dev.to/animo/fish-like-autosuggestion-in-powershell-21ec >
+# - Git aliases for pwsh  < https://github.com/gluons/powershell-git-aliases >
 
 oh-my-posh init pwsh --config 'C:/Users/Emdadul/.config/oh-my-posh/powerlevel10k_rainbow.omp.json' | Invoke-Expression
 
 # Alias
 Set-Alias -Name vim -Value nvim
 
-# PSReadline ( for fish-like autocompletion )
-Import-Module PSReadLine
-Set-PSReadLineOption -PredictionSource History
+Import-Module git-aliases -DisableNameChecking
 
 # Shows navigable menu of all options when hitting Tab
 Set-PSReadlineKeyHandler -Key \ -Function TabCompleteNext 

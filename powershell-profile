@@ -1,11 +1,19 @@
-# INSTALL OH MY POSH FIRST
+# DEPENDENCIES FOR THIS CONFIG TO WORK
+# - Oh My Posh < https://ohmyposh.dev/docs >
+# - PsReadline < https://dev.to/animo/fish-like-autosuggestion-in-powershell-21ec >
+
 oh-my-posh init pwsh --config 'C:/Users/Emdadul/.config/oh-my-posh/powerlevel10k_rainbow.omp.json' | Invoke-Expression
 
 # Alias
 Set-Alias -Name vim -Value nvim
 
+# PSReadline ( for fish-like autocompletion )
+Import-Module PSReadLine
+Set-PSReadLineOption -PredictionSource History
+
 # Shows navigable menu of all options when hitting Tab
-# Set-PSReadlineKeyHandler -Key \ -Function MenuComplete
+Set-PSReadlineKeyHandler -Key \ -Function TabCompleteNext 
+Set-PSReadlineKeyHandler -Key Tab -Function HistorySearchBackward
 
 # vim-like key hacks (similar to my .zshrc)
 Set-PSReadlineKeyHandler -Key Ctrl+k -Function HistorySearchBackward
@@ -14,4 +22,6 @@ Set-PSReadlineKeyHandler -Key Ctrl+u -Function DeleteLine
 Set-PSReadlineKeyHandler -Key Ctrl+w -Function ForwardWord
 Set-PSReadlineKeyHandler -Key Ctrl+b -Function BackwardWord
 Set-PSReadlineKeyHandler -Key Shift+Tab -Function BackwardDeleteWord
+
+# Always move cursor to end
 Set-PSReadLineOption -HistorySearchCursorMovesToEnd 

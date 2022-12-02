@@ -123,7 +123,7 @@ alias vim="nvim"
 alias cal="cal --sunday"
 alias docker="sudo docker"
 alias docker-compose="sudo docker-compose"
-alias t="task" # Alias for taskWarrior
+alias cls="clear"
 
 # Use Tab and '\' for autocompletions
 bindkey '\' expand-or-complete

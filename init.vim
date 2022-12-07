@@ -9,8 +9,6 @@ if exists('g:vscode')
 else
     inoremap {<cr> {<cr>}<c-o><s-o>
     inoremap jj <Esc>
-    vnoremap jj <Esc>
-    cnoremap jj <Esc>
 
     filetype plugin indent on
 

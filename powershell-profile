@@ -1,15 +1,17 @@
+# Starship prompt
+Invoke-Expression (&starship init powershell)
+
 # DEPENDENCIES FOR THIS SCRIPT
 # - Oh My Posh < https://ohmyposh.dev/docs >
 # - Git aliases for pwsh  < https://github.com/gluons/powershell-git-aliases >
 
-oh-my-posh init pwsh --config 'C:/Users/Emdadul/.config/oh-my-posh/powerlevel10k_rainbow.omp.json' | Invoke-Expression
-
 # Alias
 Set-Alias -Name vim -Value nvim
+Set-Alias -Name touch -Value New-Item
 
 Import-Module git-aliases -DisableNameChecking
 
-# Shows navigable menu of all options when hitting Tab
+# Tab Override
 Set-PSReadlineKeyHandler -Key \ -Function TabCompleteNext 
 Set-PSReadlineKeyHandler -Key Tab -Function HistorySearchBackward
 

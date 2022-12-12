@@ -1,14 +1,15 @@
-# Starship prompt
-Invoke-Expression (&starship init powershell)
-
 # DEPENDENCIES FOR THIS SCRIPT
 # - Oh My Posh < https://ohmyposh.dev/docs >
 # - Git aliases for pwsh  < https://github.com/gluons/powershell-git-aliases >
 
-# Alias
+# Starship prompt
+Invoke-Expression (&starship init powershell)
+
+# My Aliases
 Set-Alias -Name vim -Value nvim
 Set-Alias -Name touch -Value New-Item
 
+# Zsh Git aliases for PowerShell
 Import-Module git-aliases -DisableNameChecking
 
 # Tab Override
@@ -25,3 +26,21 @@ Set-PSReadlineKeyHandler -Key Shift+Tab -Function BackwardDeleteWord
 
 # Always move cursor to end
 Set-PSReadLineOption -HistorySearchCursorMovesToEnd 
+
+# List contents on cd
+function NavigateAndList
+{
+    # Get the directory specified by the user
+    param([string]$arg)
+
+    # Navigate and List
+    Set-Location $arg # Calling cd here would cause an infinite recursion
+    ls
+}
+
+# Register the function as a "cd" alias
+Remove-Item Alias:cd
+Set-Alias -Name cd -Value NavigateAndList
+
+# List files on startup
+ls

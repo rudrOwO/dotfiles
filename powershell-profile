@@ -1,13 +1,9 @@
 # DEPENDENCIES FOR THIS SCRIPT
 # - Oh My Posh < https://ohmyposh.dev/docs >
 # - Git aliases for pwsh  < https://github.com/gluons/powershell-git-aliases >
+# - Starship prompt
 
-# Starship prompt
 Invoke-Expression (&starship init powershell)
-
-# My Aliases
-Set-Alias -Name vim -Value nvim
-Set-Alias -Name touch -Value New-Item
 
 # Zsh Git aliases for PowerShell
 Import-Module git-aliases -DisableNameChecking
@@ -38,9 +34,18 @@ function NavigateAndList
     ls
 }
 
-# Register the function as a "cd" alias
+# List everything, including hidden files
+function ForceList
+{
+    Get-ChildItem -Force
+}
+
+# My Aliases
 Remove-Item Alias:cd
 Set-Alias -Name cd -Value NavigateAndList
+Set-Alias -Name vim -Value nvim
+Set-Alias -Name touch -Value New-Item
+Set-Alias -Name l -Value ForceList
 
 # List files on startup
 ls

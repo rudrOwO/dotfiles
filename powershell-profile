@@ -22,29 +22,21 @@ Set-PSReadlineKeyHandler -Key Ctrl+b -Function BackwardWord
 Set-PSReadLineOption -HistorySearchCursorMovesToEnd 
 
 # List contents on cd
-function NavigateAndList
-{
-    # Get the directory specified by the user
-    param([string]$arg)
-
+function cd ($arg) {
     # Navigate and List
-    Set-Location $arg # Calling cd here would cause an infinite recursion
-    ls
+    Set-Location $arg
+    Get-ChildItem
 }
 
 # List everything, including hidden files
-function ForceList
-{
+function l {
     Get-ChildItem -Force
 }
 
 # My Aliases
 Remove-Item Alias:cd
-Set-Alias -Name cd -Value NavigateAndList
 Set-Alias -Name vim -Value nvim
 Set-Alias -Name touch -Value New-Item
-Set-Alias -Name l -Value ForceList
-Set-Alias -Name grep -Value "grep -i"
 
 # My Environment Variables
 New-Variable -Name hyper -Value "~/Appdata/Roaming/Hyper/"

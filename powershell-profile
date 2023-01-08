@@ -41,5 +41,6 @@ Set-Alias -Name touch -Value New-Item
 # My Environment Variables
 New-Variable -Name hyper -Value "~/Appdata/Roaming/Hyper/"
 
-# List files on startup
-cd ~/Dev
+if (!$(Get-Process | Select-String Code)) {
+    cd ~/Dev
+}

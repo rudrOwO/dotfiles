@@ -10,13 +10,15 @@ Import-Module git-aliases -DisableNameChecking
 
 # Tab Override
 Set-PSReadlineKeyHandler -Key \ -Function TabCompleteNext 
+Set-PSReadlineKeyHandler -Key Tab -Function HistorySearchBackward
 
 # vim-like key hacks (similar to my .zshrc)
-Set-PSReadlineKeyHandler -Key Tab -Function HistorySearchBackward
-Set-PSReadlineKeyHandler -Key Shift+Tab -Function HistorySearchForward
+Set-PSReadlineKeyHandler -Key Ctrl+k -Function HistorySearchBackward
+Set-PSReadlineKeyHandler -Key Ctrl+j -Function HistorySearchForward
 Set-PSReadlineKeyHandler -Key Ctrl+u -Function DeleteLine
 Set-PSReadlineKeyHandler -Key Ctrl+w -Function ForwardWord
 Set-PSReadlineKeyHandler -Key Ctrl+b -Function BackwardWord
+Set-PSReadlineKeyHandler -Key Shift+Tab -Function BackwardDeleteWord
 
 # Always move cursor to end
 Set-PSReadLineOption -HistorySearchCursorMovesToEnd 
@@ -39,7 +41,7 @@ Set-Alias -Name vim -Value nvim
 Set-Alias -Name touch -Value New-Item
 
 # My Environment Variables
-New-Variable -Name hyper -Value "~/Appdata/Roaming/Hyper/"
+# New-Variable -Name hyper -Value "~/Appdata/Roaming/Hyper/"
 
 if (!$(Get-Process | Select-String Code)) {
     cd ~/Dev

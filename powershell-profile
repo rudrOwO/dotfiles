@@ -1,7 +1,7 @@
 # DEPENDENCIES FOR THIS SCRIPT
 # - Oh My Posh < https://ohmyposh.dev/docs >
 # - Git aliases for pwsh  < https://github.com/gluons/powershell-git-aliases >
-# - Starship prompt
+# - Starship prompt < https://starship.rs/guide/#%F0%9F%9A%80-installation >
 
 Invoke-Expression (&starship init powershell)
 
@@ -39,10 +39,8 @@ function l {
 Remove-Item Alias:cd
 Set-Alias -Name vim -Value nvim
 Set-Alias -Name touch -Value New-Item
+Set-Alias -Name which -Value Get-Command
 
-# My Environment Variables
-# New-Variable -Name hyper -Value "~/Appdata/Roaming/Hyper/"
-
-if (!$(Get-Process | Select-String Code)) {
+if ($PWD -eq "C:\Users\rudro") {
     cd ~/Dev
 }

@@ -41,6 +41,12 @@ Set-Alias -Name vim -Value nvim
 Set-Alias -Name touch -Value New-Item
 Set-Alias -Name which -Value Get-Command
 
+# Env variabales
+Set-Variable -Name ANDROID_SDK -Value C:\Users\User\AppData\Local\Android\Sdk
+Set-Variable -Name HOSTS -Value C:\Windows\System32\drivers\etc\hosts
+
 if ($PWD -eq "C:\Users\rudro") {
-    cd ~/Dev
+    Set-Location ~/Dev
 }
+
+ls

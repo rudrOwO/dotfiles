@@ -9,8 +9,8 @@ Invoke-Expression (&starship init powershell)
 Import-Module git-aliases -DisableNameChecking
 
 # Tab Override
-Set-PSReadlineKeyHandler -Key \ -Function TabCompleteNext 
-Set-PSReadlineKeyHandler -Key Tab -Function HistorySearchBackward
+# Set-PSReadlineKeyHandler -Key \ -Function TabCompleteNext 
+# Set-PSReadlineKeyHandler -Key Tab -Function HistorySearchBackward
 
 # vim-like key hacks (similar to my .zshrc)
 Set-PSReadlineKeyHandler -Key Ctrl+k -Function HistorySearchBackward

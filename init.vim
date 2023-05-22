@@ -33,6 +33,7 @@ Plug 'joshdick/onedark.vim'
 Plug 'ayu-theme/ayu-vim'
 Plug 'morhetz/gruvbox'
 Plug 'olivercederborg/poimandres.nvim'
+Plug 'tpope/vim-surround'
 call plug#end ()
 
 let g:airline_theme='minimalist'

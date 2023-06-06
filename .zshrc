@@ -10,7 +10,7 @@ export ANDROID_HOME=$HOME/Android/Sdk
 export RANGER_LOAD_DEFAULT_RC=false
 
 # If you come from bash you might have to change your $PATH.
-export PATH=/usr/local/bin:/home/rudro/.local/bin:/home/rudro/go/bin:$PATH
+export PATH=/usr/local/bin:/home/rudro/.local/bin:/home/rudro/go/bin:$ANDROID_HOME/platform-tools:$ANDROID_HOME/emulator:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/rudro/.oh-my-zsh"
@@ -19,7 +19,7 @@ export ZSH="/home/rudro/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="powerlevel10k/powerlevel10k"
+# ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -115,21 +115,20 @@ export VISUAL='/usr/bin/nvim'
 
 # My aliases
 alias zshconfig="nvim ~/.zshrc"
-alias rm="rm -rf"
 alias grep="grep -i"
-alias gtop="watch -n0.3 nvidia-smi" # for nvidia GPU stats
+# alias gtop="watch -n0.3 nvidia-smi" # for nvidia GPU stats
 alias r="ranger"
 alias vim="nvim"
 alias cal="cal --sunday"
-alias docker="sudo docker"
-alias docker-compose="sudo docker-compose"
 alias cls="clear"
 
 # Use Tab and '\' for autocompletions
-bindkey '\' expand-or-complete
+bindkey '`' expand-or-complete
 bindkey '\t' end-of-line
+
 # Vim-like keybindings for zsh
 bindkey '^k' up-line-or-search
+# bindkey '^k' end-of-line
 bindkey '^j' down-line-or-search
 bindkey '^w' forward-word
 bindkey '^b' backward-word
@@ -158,3 +157,5 @@ fi
 
 # zsh syntax highlighting
 source $ZSH/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+eval "$(starship init zsh)"

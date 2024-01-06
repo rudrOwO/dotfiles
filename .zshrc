@@ -1,16 +1,9 @@
-# Enable owerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
 export ANDROID_SDK_ROOT=$HOME/Android/Sdk  
 export ANDROID_HOME=$HOME/Android/Sdk
 export RANGER_LOAD_DEFAULT_RC=false
 
 # If you come from bash you might have to change your $PATH.
-export PATH=/usr/local/bin:/home/rudro/.local/bin:/home/rudro/go/bin:$ANDROID_HOME/platform-tools:$ANDROID_HOME/emulator:$PATH
+export PATH=/usr/local/bin:/home/rudro/.local/bin:/home/rudro/go/bin:$ANDROID_HOME/platform-tools:$ANDROID_HOME/emulator:/home/rudro/.cargo/bin:/usr/local/go/bin:/home/rudro/.local/share/gem/ruby/3.0.0/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/rudro/.oh-my-zsh"
@@ -109,6 +102,7 @@ autoload n-cd
 # fi
 export EDITOR='/usr/bin/nvim'
 export VISUAL='/usr/bin/nvim'
+export TERM='alacritty'
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -121,6 +115,13 @@ alias r="ranger"
 alias vim="nvim"
 alias cal="cal --sunday"
 alias cls="clear"
+alias p="pnpm"
+alias clipboard="xclip -selection clipboard"
+
+# Check if colorls is available
+if which colorls > /dev/null 2>&1; then
+    alias ls="colorls"
+fi
 
 # Use Tab and '\' for autocompletions
 bindkey '`' expand-or-complete
@@ -131,14 +132,11 @@ bindkey '^k' up-line-or-search
 # bindkey '^k' end-of-line
 bindkey '^j' down-line-or-search
 bindkey '^w' forward-word
+bindkey '^e' vi-forward-word-end
 bindkey '^b' backward-word
 bindkey '^[[Z' backward-kill-word
-# Deprecated
-# bindkey '^h' vi-backward-char
-# bindkey '^l' vi-forward-char
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+bindkey '^h' backward-char
+bindkey '^l' forward-char
 
 # Start shell in ~/Dev directory
 if [ $PWD = $HOME ]; then
@@ -159,3 +157,14 @@ fi
 source $ZSH/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 eval "$(starship init zsh)"
+
+# pnpm
+export PNPM_HOME="/home/rudro/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+
+# List directory on shell start
+ls

@@ -6,13 +6,8 @@
     "args": "j"
   },
   {
-    "key": "ctrl+l",
+    "key": "ctrl+tab",
     "command": "workbench.action.terminal.focusNextPane",
-    "when": "terminalFocus"
-  },
-  {
-    "key": "ctrl+h",
-    "command": "workbench.action.terminal.focusPreviousPane",
     "when": "terminalFocus"
   },
   {
@@ -98,26 +93,6 @@
     "command": "workbench.action.quickOpenNavigateNext",
     "when": "inQuickOpen"
   },
-  //{
-  //    "key": "tab",
-  //    "command": "selectNextSuggestion",
-  //    "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
-  //},
-  //{
-  //    "key": "tab",
-  //    "command": "workbench.action.quickOpenNavigateNext",
-  //    "when": "inQuickOpen"
-  //},
-  //{
-  //    "key": "shift+tab",
-  //    "command": "selectPrevSuggestion",
-  //    "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
-  //},
-  //{
-  //    "key": "shift+tab",
-  //    "command": "workbench.action.quickOpenNavigatePrevious",
-  //    "when": "inQuickOpen"
-  //},
   {
     "key": "ctrl+k",
     "command": "workbench.action.quickOpenNavigatePrevious",

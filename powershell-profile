@@ -8,17 +8,18 @@ Invoke-Expression (&starship init powershell)
 # Zsh Git aliases for PowerShell
 Import-Module git-aliases -DisableNameChecking
 
-# Tab Override
-# Set-PSReadlineKeyHandler -Key \ -Function TabCompleteNext 
-# Set-PSReadlineKeyHandler -Key Tab -Function HistorySearchBackward
-
 # vim-like key hacks (similar to my .zshrc)
+Set-PSReadlineKeyHandler -Key '`' -Function MenuComplete
+Set-PSReadlineKeyHandler -Key Tab -Function AcceptSuggestion
 Set-PSReadlineKeyHandler -Key Ctrl+k -Function HistorySearchBackward
 Set-PSReadlineKeyHandler -Key Ctrl+j -Function HistorySearchForward
-Set-PSReadlineKeyHandler -Key Ctrl+u -Function DeleteLine
-Set-PSReadlineKeyHandler -Key Ctrl+w -Function ForwardWord
-Set-PSReadlineKeyHandler -Key Ctrl+b -Function BackwardWord
 Set-PSReadlineKeyHandler -Key Shift+Tab -Function BackwardDeleteWord
+Set-PSReadlineKeyHandler -Key Ctrl+u -Function DeleteLine
+Set-PSReadlineKeyHandler -Key Ctrl+e -Function NextWordEnd
+Set-PSReadlineKeyHandler -Key Ctrl+w -Function NextWord
+Set-PSReadlineKeyHandler -Key Ctrl+b -Function BackwardWord
+Set-PSReadlineKeyHandler -Key ctrl+l -Function ForwardChar
+Set-PSReadlineKeyHandler -Key ctrl+h -Function BackwardChar
 
 # Always move cursor to end
 Set-PSReadLineOption -HistorySearchCursorMovesToEnd 
@@ -40,10 +41,12 @@ Remove-Item Alias:cd
 Set-Alias -Name vim -Value nvim
 Set-Alias -Name touch -Value New-Item
 Set-Alias -Name which -Value Get-Command
+Set-Alias -Name p -Value pnpm
 
 # Env variabales
 Set-Variable -Name ANDROID_SDK -Value C:\Users\User\AppData\Local\Android\Sdk
 Set-Variable -Name HOSTS -Value C:\Windows\System32\drivers\etc\hosts
+Set-Variable -Name NVIM -Value C:\Users\User\AppData\Local\nvim
 
 if ($PWD -eq "C:\Users\rudro") {
     Set-Location ~/Dev

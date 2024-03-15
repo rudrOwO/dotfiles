@@ -19,8 +19,6 @@
   "vscode-neovim.neovimExecutablePaths.linux": "/usr/bin/nvim",
   "vscode-neovim.neovimInitVimPaths.linux": "$HOME/.config/nvim/init.lua",
   "editor.inlineSuggest.enabled": true,
-  "terminal.integrated.useWslProfiles": true,
-  "terminal.integrated.defaultProfile.windows": "Ubuntu-20.04 (WSL)",
   "settingsSync.ignoredExtensions": ["ms-vscode-remote.remote-wsl"],
   "editor.suggestOnTriggerCharacters": true,
   "workbench.iconTheme": "material-icon-theme",
@@ -140,6 +138,12 @@
       "name": "Toggle Explorer",
       "type": "command",
       "command": "workbench.action.toggleSidebarVisibility"
+    },
+    {
+      "key": "t",
+      "name": "Toggle Panel",
+      "type": "command",
+      "command": "workbench.action.togglePanel"
     },
     {
       "key": "l",
@@ -383,22 +387,28 @@
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "workbench.startupEditor": "none",
-  "window.menuBarVisibility": "toggle",
-  "terminal.integrated.allowChords": false,
-  "files.exclude": {
-    "**/.classpath": true,
-    "**/.project": true,
-    "**/.settings": true,
-    "**/.factorypath": true
-  },
-  "prettier.arrowParens": "avoid",
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "[python]": {
+    "editor.formatOnType": true
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[cpp]": {
+    "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
+  },
+  "workbench.startupEditor": "none",
+  "window.menuBarVisibility": "toggle",
+  "terminal.integrated.allowChords": false,
+  "prettier.arrowParens": "avoid",
   "typescript.updateImportsOnFileMove.enabled": "always",
   "javascript.updateImportsOnFileMove.enabled": "always",
   "workbench.editor.labelFormat": "short",
@@ -408,16 +418,7 @@
   "prettier.semi": false,
   "todo-tree.highlights.useColourScheme": true,
   "todo-tree.general.tags": ["BUG", "HACK", "FIXME", "TODO", "NOTE", "[ ]", "[x]"],
-  "[python]": {
-    "editor.formatOnType": true
-  },
-  "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
   "editor.cursorBlinking": "solid",
-  "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
   "editor.cursorSmoothCaretAnimation": "on",
   "prettier.printWidth": 100,
   "redhat.telemetry.enabled": false,
@@ -428,11 +429,8 @@
     "asvetliakov.vscode-neovim": 1
   },
   "editor.formatOnSave": true,
-  "[cpp]": {
-    "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
-  },
   "debug.allowBreakpointsEverywhere": true,
   "editor.fontSize": 15,
   "terminal.integrated.fontSize": 15,
-  "workbench.colorTheme": "Houston"
+  "workbench.colorTheme": "poimandres-noitalics"
 }

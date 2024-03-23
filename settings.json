@@ -50,6 +50,32 @@
       "command": "references-view.find",
       "when": "editorHasReferenceProvider"
     },
+
+    {
+      "key": "H",
+      "name": "Move editor into left group",
+      "type": "command",
+      "command": "workbench.action.moveEditorToLeftGroup"
+    },
+    {
+      "key": "J",
+      "name": "Move editor into below group",
+      "type": "command",
+      "command": "workbench.action.moveEditorToBelowGroup"
+    },
+    {
+      "key": "K",
+      "name": "Move editor into above group",
+      "type": "command",
+      "command": "workbench.action.moveEditorToAboveGroup"
+    },
+    {
+      "key": "L",
+      "name": "Move editor into right group",
+      "type": "command",
+      "command": "workbench.action.moveEditorToRightGroup"
+    },
+
     {
       "key": "b",
       "name": "Buffers/Editors...",
@@ -66,30 +92,6 @@
           "name": "Close active editor",
           "type": "command",
           "command": "workbench.action.closeActiveEditor"
-        },
-        {
-          "key": "h",
-          "name": "Move editor into left group",
-          "type": "command",
-          "command": "workbench.action.moveEditorToLeftGroup"
-        },
-        {
-          "key": "j",
-          "name": "Move editor into below group",
-          "type": "command",
-          "command": "workbench.action.moveEditorToBelowGroup"
-        },
-        {
-          "key": "k",
-          "name": "Move editor into above group",
-          "type": "command",
-          "command": "workbench.action.moveEditorToAboveGroup"
-        },
-        {
-          "key": "l",
-          "name": "Move editor into right group",
-          "type": "command",
-          "command": "workbench.action.moveEditorToRightGroup"
         },
         {
           "key": "m",
@@ -432,5 +434,5 @@
   "debug.allowBreakpointsEverywhere": true,
   "editor.fontSize": 15,
   "terminal.integrated.fontSize": 15,
-  "workbench.colorTheme": "poimandres-noitalics"
+  "workbench.colorTheme": "poimandres"
 }

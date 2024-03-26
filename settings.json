@@ -432,7 +432,13 @@
   },
   "editor.formatOnSave": true,
   "debug.allowBreakpointsEverywhere": true,
-  "editor.fontSize": 15,
   "terminal.integrated.fontSize": 15,
-  "workbench.colorTheme": "poimandres"
+  "gitlens.currentLine.enabled": false,
+  "gitlens.hovers.currentLine.over": "line",
+  "gitlens.hovers.enabled": false,
+  "editor.fontSize": 15,
+  "gitlens.codeLens.enabled": false,
+  "workbench.colorTheme": "Umbra",
+  "gitlens.plusFeatures.enabled": false,
+  "errorLens.messageBackgroundMode": "message"
 }

@@ -10,7 +10,9 @@
   "editor.linkedEditing": false,
   "editor.fontFamily": "'Berkeley Mono' , 'Jetbrains Mono', monospace, consolas",
   "editor.fontLigatures": true,
-  "editor.fontWeight": 400,
+  "editor.fontSize": 15,
+  "editor.fontWeight": 500,
+  "terminal.integrated.fontWeight": 500,
   "workbench.sideBar.location": "right",
   "workbench.colorCustomizations": {
     "list.focusBackground": "#00000000"
@@ -436,9 +438,8 @@
   "gitlens.currentLine.enabled": false,
   "gitlens.hovers.currentLine.over": "line",
   "gitlens.hovers.enabled": false,
-  "editor.fontSize": 15,
   "gitlens.codeLens.enabled": false,
-  "workbench.colorTheme": "Umbra",
   "gitlens.plusFeatures.enabled": false,
-  "errorLens.messageBackgroundMode": "message"
+  "errorLens.messageBackgroundMode": "message",
+  "workbench.colorTheme": "poimandres"
 }

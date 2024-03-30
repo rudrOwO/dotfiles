@@ -14,9 +14,6 @@
   "editor.fontWeight": 500,
   "terminal.integrated.fontWeight": 500,
   "workbench.sideBar.location": "right",
-  "workbench.colorCustomizations": {
-    "list.focusBackground": "#00000000"
-  },
   "files.autoSave": "onFocusChange",
   "vscode-neovim.neovimExecutablePaths.linux": "/usr/bin/nvim",
   "vscode-neovim.neovimInitVimPaths.linux": "$HOME/.config/nvim/init.lua",
@@ -27,7 +24,11 @@
   "editor.cursorStyle": "block",
   "editor.guides.bracketPairs": true,
   "editor.guides.bracketPairsHorizontal": false,
-
+  // Theme customizations
+  "workbench.colorCustomizations": {
+    "list.focusBackground": "#00000000",
+    "editor.background": "#181818"
+  },
   //Whichkey Settings
   "whichkey.sortOrder": "alphabetically",
   "whichkey.delay": 0,
@@ -440,6 +441,5 @@
   "gitlens.hovers.enabled": false,
   "gitlens.codeLens.enabled": false,
   "gitlens.plusFeatures.enabled": false,
-  "errorLens.messageBackgroundMode": "message",
-  "workbench.colorTheme": "poimandres"
+  "errorLens.messageBackgroundMode": "message"
 }

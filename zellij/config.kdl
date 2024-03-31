@@ -37,15 +37,15 @@ keybinds clear-defaults=true {
         bind "e" { TogglePaneEmbedOrFloating; SwitchToMode "Normal"; }
         bind "c" { SwitchToMode "RenamePane"; PaneNameInput 0;}
     }
-    move {
-        bind "Ctrl m" { SwitchToMode "Normal"; }
-        bind "n" "Tab" { MovePane; }
-        bind "p" { MovePaneBackwards; }
-        bind "h" "Left" { MovePane "Left"; }
-        bind "j" "Down" { MovePane "Down"; }
-        bind "k" "Up" { MovePane "Up"; }
-        bind "l" "Right" { MovePane "Right"; }
-    }
+    // move {
+    //     bind "Ctrl m" { SwitchToMode "Normal"; }
+    //     bind "n" "Tab" { MovePane; }
+    //     bind "p" { MovePaneBackwards; }
+    //     bind "h" "Left" { MovePane "Left"; }
+    //     bind "j" "Down" { MovePane "Down"; }
+    //     bind "k" "Up" { MovePane "Up"; }
+    //     bind "l" "Right" { MovePane "Right"; }
+    // }
     tab {
         bind "Ctrl t" { SwitchToMode "Normal"; }
         bind "r" { SwitchToMode "RenameTab"; TabNameInput 0; }
@@ -175,9 +175,9 @@ keybinds clear-defaults=true {
     shared_except "tab" "locked" {
         bind "Ctrl t" { SwitchToMode "Tab"; }
     }
-    shared_except "move" "locked" {
-        bind "Ctrl m" { SwitchToMode "Move"; }
-    }
+    // shared_except "move" "locked" {
+    //     bind "Ctrl m" { SwitchToMode "Move"; }
+    // }
     shared_except "tmux" "locked" {
         bind "Ctrl b" { SwitchToMode "Tmux"; }
     }

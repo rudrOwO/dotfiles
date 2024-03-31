@@ -3,7 +3,7 @@ export ANDROID_HOME=$HOME/Android/Sdk
 export RANGER_LOAD_DEFAULT_RC=false
 
 # If you come from bash you might have to change your $PATH.
-export PATH=/usr/local/bin:/home/rudro/.local/bin:/home/rudro/go/bin:$ANDROID_HOME/platform-tools:$ANDROID_HOME/emulator:/home/rudro/.cargo/bin:/usr/local/go/bin:/home/rudro/.local/share/gem/ruby/3.0.0/bin:$PATH
+export PATH=/usr/local/bin:/home/rudro/.local/bin:/home/rudro/go/bin:$ANDROID_HOME/platform-tools:$ANDROID_HOME/emulator:/home/rudro/.cargo/bin:/usr/local/go/bin:/home/rudro/.local/share/gem/ruby/3.0.0/bin:/home/rudro/.dotnet/tools:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/rudro/.oh-my-zsh"
@@ -116,12 +116,8 @@ alias vim="nvim"
 alias cal="cal --sunday"
 alias cls="clear"
 alias p="pnpm"
+alias z="zellij"
 alias clipboard="xclip -selection clipboard"
-
-# Check if colorls is available
-if which colorls > /dev/null 2>&1; then
-    alias ls="colorls"
-fi
 
 # Use Tab and '\' for autocompletions
 bindkey '`' expand-or-complete
@@ -146,7 +142,7 @@ fi
 # Auto List content on directory change
 function list_all() {
   emulate -L zsh
-  ls
+  ls -lh
 }
 
 if [[ ${chpwd_functions[(r)list_all]} != "list_all" ]];then
@@ -167,4 +163,4 @@ esac
 # pnpm end
 
 # List directory on shell start
-ls
+ls -lh

@@ -3,7 +3,7 @@ export ANDROID_HOME=$HOME/Android/Sdk
 export RANGER_LOAD_DEFAULT_RC=false
 
 # If you come from bash you might have to change your $PATH.
-export PATH=/usr/local/bin:/home/rudro/.local/bin:/home/rudro/go/bin:$ANDROID_HOME/platform-tools:$ANDROID_HOME/emulator:/home/rudro/.cargo/bin:/usr/local/go/bin:/home/rudro/.local/share/gem/ruby/3.0.0/bin:/home/rudro/.dotnet/tools:$PATH
+export PATH=/usr/local/bin:/home/rudro/.local/bin:/home/rudro/go/bin:/home/rudro/.cargo/bin:/usr/local/go/bin:/home/rudro/.local/share/gem/ruby/3.0.0/bin:/home/rudro/.dotnet/tools:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/rudro/.oh-my-zsh"
@@ -84,8 +84,8 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 # cd into multiple directories
-autoload n-list
-autoload n-cd
+# autoload n-list
+# autoload n-cd
 
 # User configuration
 
@@ -116,7 +116,7 @@ alias vim="nvim"
 alias cal="cal --sunday"
 alias cls="clear"
 alias p="pnpm"
-alias z="zellij"
+alias z="zoxide query"
 alias clipboard="xclip -selection clipboard"
 
 # Use Tab and '\' for autocompletions
@@ -153,6 +153,7 @@ fi
 source $ZSH/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 eval "$(starship init zsh)"
+eval "$(zoxide init zsh)"
 
 # pnpm
 export PNPM_HOME="/home/rudro/.local/share/pnpm"

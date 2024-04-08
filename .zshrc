@@ -79,6 +79,7 @@ plugins=(
     sudo
     copypath
     copyfile
+    docker
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -116,7 +117,6 @@ alias vim="nvim"
 alias cal="cal --sunday"
 alias cls="clear"
 alias p="pnpm"
-alias z="zoxide query"
 alias clipboard="xclip -selection clipboard"
 
 # Use Tab and '\' for autocompletions

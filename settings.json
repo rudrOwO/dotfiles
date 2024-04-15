@@ -10,7 +10,7 @@
   "editor.linkedEditing": false,
   "editor.fontFamily": "'Berkeley Mono' , 'Jetbrains Mono', monospace, consolas",
   "editor.fontLigatures": true,
-  "editor.fontSize": 15,
+  "editor.fontSize": 16,
   "editor.fontWeight": 500,
   "terminal.integrated.fontWeight": 500,
   "terminal.integrated.sendKeybindingsToShell": true,
@@ -54,7 +54,6 @@
       "command": "references-view.find",
       "when": "editorHasReferenceProvider"
     },
-
     {
       "key": "H",
       "name": "Move editor into left group",
@@ -408,9 +407,6 @@
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "[cpp]": {
-    "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
-  },
   "workbench.startupEditor": "none",
   "window.menuBarVisibility": "toggle",
   "terminal.integrated.allowChords": false,
@@ -435,11 +431,13 @@
   },
   "editor.formatOnSave": true,
   "debug.allowBreakpointsEverywhere": true,
-  "terminal.integrated.fontSize": 15,
+  "terminal.integrated.fontSize": 16,
   "gitlens.currentLine.enabled": false,
   "gitlens.hovers.currentLine.over": "line",
   "gitlens.hovers.enabled": false,
   "gitlens.codeLens.enabled": false,
   "gitlens.plusFeatures.enabled": false,
-  "errorLens.messageBackgroundMode": "message"
+  "errorLens.messageBackgroundMode": "message",
+  "workbench.colorTheme": "Default Dark Modern",
+  "git.confirmSync": false
 }

@@ -8,12 +8,6 @@
     "command": "workbench.action.showCommands"
   },
   {
-    "command": "vscode-neovim.compositeEscape1",
-    "key": "j",
-    "when": "neovim.mode == insert && editorTextFocus",
-    "args": "j"
-  },
-  {
     "key": "ctrl+tab",
     "command": "workbench.action.terminal.focusNextPane",
     "when": "terminalFocus"

@@ -1,4 +1,9 @@
 {
+  "vscode-neovim.compositeKeys": {
+    "jj": {
+      "command": "vscode-neovim.escape"
+    }
+  },
   "tailwindCSS.includeLanguages": {
     "html": "html",
     "javascript": "javascript",

@@ -30,11 +30,6 @@
   "editor.cursorStyle": "block",
   "editor.guides.bracketPairs": true,
   "editor.guides.bracketPairsHorizontal": false,
-  // Theme customizations
-  "workbench.colorCustomizations": {
-    "list.focusBackground": "#00000000",
-    "editor.background": "#181818"
-  },
   //Whichkey Settings
   "whichkey.sortOrder": "alphabetically",
   "whichkey.delay": 0,
@@ -154,6 +149,27 @@
       "name": "Toggle Panel",
       "type": "command",
       "command": "workbench.action.togglePanel"
+    },
+    {
+      "key": " ",
+      "name": "Toggle Bookmark",
+      "type": "command",
+      "command": "bookmarks.toggle",
+      "when": "editorTextFocus"
+    },
+    {
+      "key": "j",
+      "name": "Next Bookmark",
+      "type": "command",
+      "command": "bookmarks.jumpToNext",
+      "when": "editorTextFocus"
+    },
+    {
+      "key": "k",
+      "name": "Previous Bookmark",
+      "type": "command",
+      "command": "bookmarks.jumpToPrevious",
+      "when": "editorTextFocus"
     },
     {
       "key": "l",
@@ -301,20 +317,6 @@
           "command": "bookmarks.clear"
         },
         {
-          "key": "j",
-          "name": "Next Bookmark",
-          "type": "command",
-          "command": "bookmarks.jumpToNext",
-          "when": "editorTextFocus"
-        },
-        {
-          "key": "k",
-          "name": "Previous Bookmark",
-          "type": "command",
-          "command": "bookmarks.jumpToPrevious",
-          "when": "editorTextFocus"
-        },
-        {
           "key": "l",
           "name": "List Bookmarks",
           "type": "command",
@@ -326,13 +328,6 @@
           "name": "Refresh Bookmarks",
           "type": "command",
           "command": "bookmarks.refresh"
-        },
-        {
-          "key": "t",
-          "name": "Toggle Bookmark",
-          "type": "command",
-          "command": "bookmarks.toggle",
-          "when": "editorTextFocus"
         },
         {
           "key": "s",
@@ -443,6 +438,7 @@
   "gitlens.codeLens.enabled": false,
   "gitlens.plusFeatures.enabled": false,
   "errorLens.messageBackgroundMode": "message",
-  "workbench.colorTheme": "Default Dark Modern",
-  "git.confirmSync": false
+  "git.confirmSync": false,
+  "editor.renderWhitespace": "none",
+  "workbench.colorTheme": "One Dark Pro Monokai Darker"
 }

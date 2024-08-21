@@ -432,13 +432,8 @@
   "editor.formatOnSave": true,
   "debug.allowBreakpointsEverywhere": true,
   "terminal.integrated.fontSize": 16,
-  "gitlens.currentLine.enabled": false,
-  "gitlens.hovers.currentLine.over": "line",
-  "gitlens.hovers.enabled": false,
-  "gitlens.codeLens.enabled": false,
-  "gitlens.plusFeatures.enabled": false,
   "errorLens.messageBackgroundMode": "message",
   "git.confirmSync": false,
   "editor.renderWhitespace": "none",
-  "workbench.colorTheme": "One Dark Pro Monokai Darker"
+  "workbench.colorTheme": "Houston"
 }

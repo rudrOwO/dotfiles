@@ -438,6 +438,6 @@
   "terminal.integrated.fontSize": 16,
   "errorLens.messageBackgroundMode": "message",
   "git.confirmSync": false,
-  "editor.renderWhitespace": "none",
+  "editor.renderWhitespace": "all",
   "workbench.colorTheme": "Houston"
 }

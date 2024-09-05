@@ -76,8 +76,6 @@ plugins=(
     git
     zsh-autosuggestions
     sudo
-    copypath
-    copyfile
 )
 
 source $ZSH/oh-my-zsh.sh

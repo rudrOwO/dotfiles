@@ -1,7 +1,5 @@
 export PATH=/usr/local/bin:/home/rudro/.local/bin:/home/rudro/go/bin:/home/rudro/.cargo/bin:/usr/local/go/bin:/home/rudro/.local/share/gem/ruby/3.0.0/bin:/home/rudro/.dotnet/tools:$PATH
 
-export ANDROID_SDK_ROOT=$HOME/Android/Sdk  
-export ANDROID_HOME=$HOME/Android/Sdk
 export RANGER_LOAD_DEFAULT_RC=false
 
 # Path to your oh-my-zsh installation.
@@ -121,9 +119,7 @@ bindkey '`' expand-or-complete
 bindkey '\t' end-of-line
 
 # Vim-like keybindings for zsh
-bindkey '^k' up-line-or-search
-# bindkey '^k' end-of-line
-bindkey '^j' down-line-or-search
+# Use ^p and ^n to travel history
 bindkey '^w' forward-word
 bindkey '^e' vi-forward-word-end
 bindkey '^b' backward-word

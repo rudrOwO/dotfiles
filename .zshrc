@@ -119,7 +119,8 @@ bindkey '`' expand-or-complete
 bindkey '\t' end-of-line
 
 # Vim-like keybindings for zsh
-# Use ^p and ^n to travel history
+bindkey '^p' up-line-or-search
+bindkey '^n' down-line-or-search
 bindkey '^w' forward-word
 bindkey '^e' vi-forward-word-end
 bindkey '^b' backward-word

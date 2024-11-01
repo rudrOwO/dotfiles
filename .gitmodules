@@ -1,6 +1,0 @@
-[submodule "neovim"]
-	path = neovim
-	url = https://github.com/rudrowo/neovim.git
-[submodule "alacritty/themes"]
-	path = alacritty/themes
-	url = https://github.com/alacritty/alacritty-theme

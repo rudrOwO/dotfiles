@@ -1,9 +1,23 @@
 export PATH=/usr/local/bin:/home/rudro/.local/bin:/home/rudro/go/bin:/home/rudro/.cargo/bin:/usr/local/go/bin:/home/rudro/.local/share/gem/ruby/3.0.0/bin:/home/rudro/.dotnet/tools:$PATH
-
 export RANGER_LOAD_DEFAULT_RC=false
-
-# Path to your oh-my-zsh installation.
 export ZSH="/home/rudro/.oh-my-zsh"
+# Preferred editor for local and remote sessions
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
+# else
+#   export EDITOR='mvim'
+# fi
+export EDITOR='/usr/bin/nvim'
+export VISUAL='/usr/bin/nvim'
+export TERM='alacritty'
+
+# export MANPATH="/usr/local/man:$MANPATH"
+
+# You may need to manually set your language environment
+# export LANG=en_US.UTF-8
+
+# Compilation flags
+# export ARCHFLAGS="-arch x86_64"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -78,30 +92,6 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
-# cd into multiple directories
-# autoload n-list
-# autoload n-cd
-
-# User configuration
-
-# export MANPATH="/usr/local/man:$MANPATH"
-
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
-export EDITOR='/usr/bin/nvim'
-export VISUAL='/usr/bin/nvim'
-export TERM='alacritty'
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
 # My aliases
 alias zshconfig="nvim ~/.zshrc"
 alias grep="grep -i"
@@ -113,6 +103,8 @@ alias cls="clear"
 alias p="pnpm"
 alias clipboard="xclip -selection clipboard"
 alias zl="zellij"
+alias ls="eza -w 100 --color=always --icons=always --sort=extension --group-directories-first"
+alias l="ls --long --all"
 
 # Use Tab and '\' for autocompletions
 bindkey '`' expand-or-complete
@@ -136,7 +128,7 @@ fi
 # Auto List content on directory change
 function list_all() {
   emulate -L zsh
-  ls -lh
+  ls
 }
 
 if [[ ${chpwd_functions[(r)list_all]} != "list_all" ]];then
@@ -158,4 +150,4 @@ esac
 # pnpm end
 
 # List directory on shell start
-ls -lh
+ls

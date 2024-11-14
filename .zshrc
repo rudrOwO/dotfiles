@@ -91,6 +91,7 @@ plugins=(
 )
 
 source $ZSH/oh-my-zsh.sh
+source $ZSH/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # My aliases
 alias zshconfig="nvim ~/.zshrc"
@@ -120,11 +121,6 @@ bindkey '^[[Z' backward-kill-word
 bindkey '^h' backward-char
 bindkey '^l' forward-char
 
-# Start shell in ~/Dev directory
-if [ $PWD = $HOME ]; then
-    cd ~/Dev
-fi
-
 # Auto List content on directory change
 function list_all() {
   emulate -L zsh
@@ -134,9 +130,6 @@ function list_all() {
 if [[ ${chpwd_functions[(r)list_all]} != "list_all" ]];then
   chpwd_functions=(${chpwd_functions[@]} "list_all")
 fi
-
-# zsh syntax highlighting
-source $ZSH/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
@@ -149,5 +142,6 @@ case ":$PATH:" in
 esac
 # pnpm end
 
-# List directory on shell start
-ls
+if [ $PWD = $HOME ]; then
+    cd ~/Dev
+fi

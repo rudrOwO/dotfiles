@@ -7,8 +7,8 @@ export ZSH="/home/rudro/.oh-my-zsh"
 # else
 #   export EDITOR='mvim'
 # fi
-export EDITOR='/usr/bin/nvim'
-export VISUAL='/usr/bin/nvim'
+export EDITOR='/usr/local/bin/nvim'
+export VISUAL='/usr/local/bin/nvim'
 export TERM='alacritty'
 
 # export MANPATH="/usr/local/man:$MANPATH"

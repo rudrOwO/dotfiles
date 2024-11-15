@@ -143,5 +143,7 @@ esac
 # pnpm end
 
 if [ $PWD = $HOME ]; then
-    cd ~/Dev
+  cd ~/Dev
+else
+  ls
 fi

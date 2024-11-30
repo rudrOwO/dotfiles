@@ -173,7 +173,7 @@ bindsym $mod+r mode "resize"
 ######################################
 
 # start a terminal
-bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec wezterm
 
 # kill focused window
 bindsym $mod+q kill
@@ -402,7 +402,7 @@ exec --no-startup-id xset s 480 dpms 600 600 600
 #exec --no-startup-id xscreensaver --no-splash
 
 # Desktop notifications
-exec --no-startup-id dbus-launch dunst --config ~/.config/dunst/dunstrc
+# exec --no-startup-id dbus-launch dunst --config ~/.config/dunst/dunstrc
 # alternative if you installed aside with XFCE4:
 # exec --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd &
 

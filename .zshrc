@@ -9,7 +9,7 @@ export ZSH="/home/rudro/.oh-my-zsh"
 # fi
 export EDITOR='/usr/local/bin/nvim'
 export VISUAL='/usr/local/bin/nvim'
-export TERM='alacritty'
+export TERM='wezterm'
 
 # export MANPATH="/usr/local/man:$MANPATH"
 

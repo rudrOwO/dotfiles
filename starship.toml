@@ -1,16 +1,8 @@
-format = """$all|$os
-$character"""
-
 # Get editor completions based on the config schema
 "$schema" = 'https://starship.rs/config-schema.json'
 
-[line_break]
+# Disable the package module, hiding it from the prompt completely
+[package]
 disabled = true
 
-[os]
-disabled = false
-
-[os.symbols]
-Windows = "  "
-Linux = "🐧"
-Ubuntu = "🐧"
+command_timeout = 4000

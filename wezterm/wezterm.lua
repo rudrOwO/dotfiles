@@ -1,6 +1,7 @@
 local wezterm = require("wezterm")
 local scrollback_in_vim_keybinds = require("scrollback_in_vim")
 local pane_split_keybinds = require("pane_split")
+local config = wezterm.config_builder()
 
 local function appendTable(t1, t2)
 	for _, value in ipairs(t2) do
@@ -8,11 +9,14 @@ local function appendTable(t1, t2)
 	end
 end
 
-local config = wezterm.config_builder()
-
-config.color_scheme = "Default (dark) (terminal.sexy)"
 config.font = wezterm.font({ family = "Berkeley Mono" })
 config.font_size = 15
+
+config.color_scheme = "carbonfox"
+config.colors = {
+	-- background = "black",
+	cursor_bg = "#52ad70",
+}
 
 -- keybinds
 config.keys = {}

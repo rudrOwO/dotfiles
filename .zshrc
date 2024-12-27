@@ -1,4 +1,4 @@
-export PATH=/usr/local/bin:/home/rudro/.local/bin:/home/rudro/go/bin:/home/rudro/.cargo/bin:/usr/local/go/bin:/home/rudro/.local/share/gem/ruby/3.0.0/bin:/home/rudro/.dotnet/tools:$PATH
+export PATH=/usr/local/bin:/home/rudro/.local/bin:/home/rudro/go/bin:/usr/local/go/bin:/home/rudro/.local/share/gem/ruby/3.2.0/bin:/home/rudro/.dotnet/tools:$PATH
 export RANGER_LOAD_DEFAULT_RC=false
 export ZSH="/home/rudro/.oh-my-zsh"
 # Preferred editor for local and remote sessions
@@ -103,7 +103,7 @@ alias cal="cal --sunday"
 alias cls="clear"
 alias p="pnpm"
 alias clipboard="xclip -selection clipboard"
-alias zl="zellij"
+alias lz="lazygit"
 alias ls="eza -w 100 --color=always --icons=always --sort=extension --group-directories-first"
 alias l="ls --long --all"
 

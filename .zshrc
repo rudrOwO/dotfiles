@@ -134,16 +134,15 @@ fi
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
 
-# pnpm
-export PNPM_HOME="/home/rudro/.local/share/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-# pnpm end
-
 if [ $PWD = $HOME ]; then
   cd ~/Dev
 else
   ls
 fi
+
+# bun completions
+[ -s "/home/rudro/.bun/_bun" ] && source "/home/rudro/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"

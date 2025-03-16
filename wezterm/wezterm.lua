@@ -20,7 +20,7 @@ config.colors = {
 
 -- keybinds
 config.keys = {}
-config.leader = { key = " ", mods = "CTRL", timeout_milliseconds = 1000 }
+config.leader = { key = " ", mods = "CTRL", timeout_milliseconds = 2000 }
 appendTable(config.keys, scrollback_in_vim_keybinds)
 appendTable(config.keys, pane_split_keybinds)
 appendTable(config.keys, {

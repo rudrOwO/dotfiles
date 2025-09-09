@@ -97,11 +97,9 @@ source $ZSH/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 alias zshconfig="nvim ~/.zshrc"
 alias grep="grep -i"
 # alias gtop="watch -n0.3 nvidia-smi" # for nvidia GPU stats
-alias r="ranger"
 alias vim="nvim"
 alias cal="cal --sunday"
 alias cls="clear"
-alias p="pnpm"
 alias cin="xclip -selection clipboard -in"
 alias cout="xclip -selection clipboard -out"
 alias lz="lazygit"

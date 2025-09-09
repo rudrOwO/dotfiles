@@ -10,12 +10,12 @@ local function appendTable(t1, t2)
 end
 
 config.font = wezterm.font({ family = "Berkeley Mono" })
-config.font_size = 15
+config.font_size = 13.5
 
 config.color_scheme = "carbonfox"
 config.colors = {
 	-- background = "black",
-	cursor_bg = "#52ad70",
+	cursor_bg = "#2596be",
 }
 
 -- keybinds

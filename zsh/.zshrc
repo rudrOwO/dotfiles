@@ -1,4 +1,4 @@
-export PATH=/usr/local/bin:/home/rudro/.local/bin:/home/rudro/go/bin:/usr/local/go/bin:/home/rudro/.local/share/gem/ruby/3.2.0/bin:/home/rudro/.dotnet/tools:$PATH
+export PATH=/usr/local/bin:/home/rudro/.local/bin:/home/rudro/go/bin:/usr/local/go/bin:/home/rudro/.dotnet/tools:$PATH
 export RANGER_LOAD_DEFAULT_RC=false
 export ZSH="/home/rudro/.oh-my-zsh"
 # Preferred editor for local and remote sessions
@@ -95,13 +95,13 @@ source $ZSH/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # My aliases
 alias zshconfig="nvim ~/.zshrc"
-alias grep="grep -i"
 # alias gtop="watch -n0.3 nvidia-smi" # for nvidia GPU stats
 alias vim="nvim"
 alias cal="cal --sunday"
 alias cls="clear"
 alias cin="xclip -selection clipboard -in"
 alias cout="xclip -selection clipboard -out"
+alias hs='history | sed "s/[0-9][0-9]* //g" | fzf | cin'
 alias lz="lazygit"
 alias ls="eza -w 100 --color=always --icons=always --sort=extension --group-directories-first"
 alias l="ls --long --all"

@@ -138,10 +138,3 @@ if [ $PWD = $HOME ]; then
 else
   ls
 fi
-
-# bun completions
-[ -s "/home/rudro/.bun/_bun" ] && source "/home/rudro/.bun/_bun"
-
-# bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"

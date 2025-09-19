@@ -1,5 +1,4 @@
 export PATH=/usr/local/bin:/home/rudro/.local/bin:/home/rudro/go/bin:/usr/local/go/bin:/home/rudro/.dotnet/tools:$PATH
-export RANGER_LOAD_DEFAULT_RC=false
 export ZSH="/home/rudro/.oh-my-zsh"
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
@@ -9,7 +8,6 @@ export ZSH="/home/rudro/.oh-my-zsh"
 # fi
 export EDITOR='/usr/local/bin/nvim'
 export VISUAL='/usr/local/bin/nvim'
-export TERM='wezterm'
 
 # export MANPATH="/usr/local/man:$MANPATH"
 

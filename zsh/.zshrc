@@ -103,6 +103,7 @@ alias hs='history | sed "s/[0-9][0-9]* //g" | fzf | cin'
 alias lz="lazygit"
 alias ls="eza -w 100 --color=always --icons=always --sort=extension --group-directories-first"
 alias l="ls --long --all"
+alias zl="zellij"
 
 # Use Tab and '\' for autocompletions
 bindkey '`' expand-or-complete

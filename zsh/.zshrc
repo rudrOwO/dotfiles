@@ -100,7 +100,7 @@ alias cls="clear"
 alias cin="xclip -selection clipboard -in"
 alias cout="xclip -selection clipboard -out"
 alias hs='history | sed "s/[0-9][0-9]* //g" | fzf | cin'
-alias lz="lazygit"
+alias gg="lazygit"
 alias ls="eza -w 100 --color=always --icons=always --sort=extension --group-directories-first"
 alias l="ls --long --all"
 

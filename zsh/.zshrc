@@ -127,20 +127,8 @@ function auto_activate_venv() {
   local venv_path="$PWD/.venv/bin/activate"
 
   if [[ -z "$VIRTUAL_ENV" ]]; then
-    # SCENARIO 1: No VENV active. Check if one should be activated.
     if [[ -f "$venv_path" ]]; then
       source "$venv_path"
-    fi
-  else
-    # SCENARIO 2: A VENV IS active. Check if we have left the project root.
-    
-    # Get the project root path by stripping the last component (.venv)
-    local active_project_root="${VIRTUAL_ENV:h}"
-    
-    # Check if the Current Directory ($PWD) is outside the active project root.
-    # We check if $PWD does NOT start with the $active_project_root path.
-    if [[ "$PWD" != "$active_project_root"* ]]; then
-      deactivate
     fi
   fi
 }

@@ -37,13 +37,13 @@ export VISUAL='/usr/local/bin/nvim'
 # HYPHEN_INSENSITIVE="true"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
-DISABLE_AUTO_UPDATE="true"
+# DISABLE_AUTO_UPDATE="true"
 
 # Uncomment the following line to automatically update without prompting.
 # DISABLE_UPDATE_PROMPT="true"
 
 # Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
+export UPDATE_ZSH_DAYS=30
 
 # Uncomment the following line if pasting URLs and other text is messed up.
 # DISABLE_MAGIC_FUNCTIONS="true"
@@ -82,6 +82,8 @@ DISABLE_AUTO_UPDATE="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
+
+# Sourcing all bells and whistles
 plugins=(
     git
     zsh-autosuggestions
@@ -90,8 +92,9 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 source $ZSH/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+eval "$(starship init zsh)"
+eval "$(zoxide init zsh)"
 
-# My aliases
 alias zshconfig="nvim ~/.zshrc"
 # alias gtop="watch -n0.3 nvidia-smi" # for nvidia GPU stats
 alias vim="nvim"
@@ -110,6 +113,7 @@ bindkey '`' expand-or-complete
 bindkey '\t' end-of-line
 
 # Vim-like keybindings for zsh
+# DEPRACATED: conflicts with multiplxer pane navigation
 bindkey '^p' up-line-or-search
 bindkey '^n' down-line-or-search
 bindkey '^w' forward-word
@@ -119,18 +123,41 @@ bindkey '^[[Z' backward-kill-word
 bindkey '^h' backward-char
 bindkey '^l' forward-char
 
-# Auto List content on directory change
-function list_all() {
-  emulate -L zsh
-  ls
+function auto_activate_venv() {
+  local venv_path="$PWD/.venv/bin/activate"
+
+  if [[ -z "$VIRTUAL_ENV" ]]; then
+    # SCENARIO 1: No VENV active. Check if one should be activated.
+    if [[ -f "$venv_path" ]]; then
+      source "$venv_path"
+    fi
+  else
+    # SCENARIO 2: A VENV IS active. Check if we have left the project root.
+    
+    # Get the project root path by stripping the last component (.venv)
+    local active_project_root="${VIRTUAL_ENV:h}"
+    
+    # Check if the Current Directory ($PWD) is outside the active project root.
+    # We check if $PWD does NOT start with the $active_project_root path.
+    if [[ "$PWD" != "$active_project_root"* ]]; then
+      deactivate
+    fi
+  fi
 }
 
-if [[ ${chpwd_functions[(r)list_all]} != "list_all" ]];then
-  chpwd_functions=(${chpwd_functions[@]} "list_all")
+# my custom chpwd funciton for running some side-effects
+function custom_chpwd() {
+  emulate -L zsh
+  ls
+  auto_activate_venv
+}
+
+# Registering custom_chpwd
+if [[ ${chpwd_functions[(r)list_all]} != "custom_chpwd" ]];then
+  chpwd_functions=(${chpwd_functions[@]} "custom_chpwd")
 fi
 
-eval "$(starship init zsh)"
-eval "$(zoxide init zsh)"
+auto_activate_venv
 
 if [[ $(ps -p $PPID -o comm=) != zellij ]]; then
   zl ls

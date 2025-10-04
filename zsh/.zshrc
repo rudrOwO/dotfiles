@@ -37,13 +37,13 @@ export VISUAL='/usr/local/bin/nvim'
 # HYPHEN_INSENSITIVE="true"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
-DISABLE_AUTO_UPDATE="true"
+# DISABLE_AUTO_UPDATE="true"
 
 # Uncomment the following line to automatically update without prompting.
 # DISABLE_UPDATE_PROMPT="true"
 
 # Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
+export UPDATE_ZSH_DAYS=30
 
 # Uncomment the following line if pasting URLs and other text is messed up.
 # DISABLE_MAGIC_FUNCTIONS="true"
@@ -82,16 +82,14 @@ DISABLE_AUTO_UPDATE="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(
-    git
-    zsh-autosuggestions
-    sudo
-)
 
+# Sourcing all bells and whistles
+plugins=( git zsh-autosuggestions sudo )
 source $ZSH/oh-my-zsh.sh
+eval "$(starship init zsh)"
+eval "$(zoxide init zsh)"
 source $ZSH/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-# My aliases
 alias zshconfig="nvim ~/.zshrc"
 # alias gtop="watch -n0.3 nvidia-smi" # for nvidia GPU stats
 alias vim="nvim"
@@ -116,21 +114,20 @@ bindkey '^w' forward-word
 bindkey '^e' vi-forward-word-end
 bindkey '^b' backward-word
 bindkey '^[[Z' backward-kill-word
-bindkey '^h' backward-char
-bindkey '^l' forward-char
+# conflicts with multiplxer pane navigation
+# bindkey '^h' backward-char
+# bindkey '^l' forward-char
 
-# Auto List content on directory change
-function list_all() {
+# my custom chpwd funciton for listing contents on directory change
+function custom_chpwd() {
   emulate -L zsh
   ls
 }
 
-if [[ ${chpwd_functions[(r)list_all]} != "list_all" ]];then
-  chpwd_functions=(${chpwd_functions[@]} "list_all")
+# Registering custom_chpwd
+if [[ ${chpwd_functions[(r)list_all]} != "custom_chpwd" ]];then
+  chpwd_functions=(${chpwd_functions[@]} "custom_chpwd")
 fi
-
-eval "$(starship init zsh)"
-eval "$(zoxide init zsh)"
 
 if [[ $(ps -p $PPID -o comm=) != zellij ]]; then
   zl ls

@@ -4,6 +4,8 @@
 
 keybinds clear-defaults=true {
     shared {
+        bind "Ctrl q" { GoToPreviousTab; }
+        bind "Ctrl e" { GoToNextTab; }
         bind "Ctrl f" { ToggleFloatingPanes; }
         bind "Ctrl h" {
             MessagePlugin "https://github.com/hiasr/vim-zellij-navigator/releases/download/0.3.0/vim-zellij-navigator.wasm" {
@@ -223,7 +225,7 @@ keybinds clear-defaults=true {
         bind "Alt o" { MoveTab "right"; }
         bind "Alt p" { TogglePaneInGroup; }
         bind "Alt Shift p" { ToggleGroupMarking; }
-        bind "Ctrl q" { Quit; }
+        bind "Ctrl x" { Quit; }
     }
     shared_except "locked" "session" {
         bind "Ctrl o" { SwitchToMode "session"; }

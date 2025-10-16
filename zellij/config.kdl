@@ -4,6 +4,7 @@
 
 keybinds clear-defaults=true {
     shared {
+        bind "Alt n" { NewPane; }
         bind "Ctrl q" { GoToPreviousTab; }
         bind "Ctrl e" { GoToNextTab; }
         bind "Ctrl f" { ToggleFloatingPanes; }
@@ -221,7 +222,6 @@ keybinds clear-defaults=true {
         bind "Alt ]" { NextSwapLayout; }
         bind "Ctrl g" { SwitchToMode "locked"; }
         bind "Alt i" { MoveTab "left"; }
-        bind "Alt n" { NewPane; }
         bind "Alt o" { MoveTab "right"; }
         bind "Alt p" { TogglePaneInGroup; }
         bind "Alt Shift p" { ToggleGroupMarking; }

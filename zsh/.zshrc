@@ -1,4 +1,4 @@
-export PATH=/usr/local/bin:/home/rudro/.local/bin:/home/rudro/go/bin:/usr/local/go/bin:/home/rudro/.dotnet/tools:$PATH
+export PATH=/usr/local/bin:/home/rudro/.local/bin:/home/rudro/go/bin:/usr/local/go/bin:/home/rudro/.cargo/bin:$PATH
 export ZSH="/home/rudro/.oh-my-zsh"
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
@@ -84,11 +84,10 @@ export UPDATE_ZSH_DAYS=30
 # Add wisely, as too many plugins slow down shell startup.
 
 # Sourcing all bells and whistles
-plugins=( git zsh-autosuggestions sudo )
+plugins=( git sudo zsh-autosuggestions zsh-syntax-highlighting )
 source $ZSH/oh-my-zsh.sh
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
-source $ZSH/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 alias zshconfig="nvim ~/.zshrc"
 # alias gtop="watch -n0.3 nvidia-smi" # for nvidia GPU stats

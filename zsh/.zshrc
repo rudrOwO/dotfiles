@@ -84,7 +84,7 @@ export UPDATE_ZSH_DAYS=30
 # Add wisely, as too many plugins slow down shell startup.
 
 # Sourcing all bells and whistles
-plugins=( git sudo zsh-autosuggestions zsh-syntax-highlighting )
+plugins=( git docker sudo zsh-autosuggestions zsh-syntax-highlighting )
 source $ZSH/oh-my-zsh.sh
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
